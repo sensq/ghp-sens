@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import13.js"></script>
+	<script type="text/javascript" src="./js/OBJLoader58.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+
+	<title>
+		ランダム地形生成
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				ランダム地形生成
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<form name="box">
+					<font size="3">
+						組み合わせによって形状が変わります。<br>
+						Size1：<input type="checkbox" onclick="set();" name="size1" id="size1">（10, 64）<br>
+						Size2：<input type="checkbox" onclick="set();" name="size2" id="size2">（8, 32）<br>
+						Size3：<input type="checkbox" onclick="set();" name="size3" id="size3">（6, 16）<br>
+						Size4：<input type="checkbox" onclick="set();" name="size4" id="size4">（4, 8）<br>
+						Size5：<input type="checkbox" onclick="set();" name="size5" id="size5">（2, 4）<br>
+						Size6：<input type="checkbox" onclick="set();" name="size6" id="size6">（1, 2）<br>
+						カスタム：<input type="checkbox" onclick="set();" name="size7" id="size7">
+						<input type="text" onkeyup="set();" name="cus_h" id="cus_h" size="3">
+						<input type="text" onkeyup="set();" name="cus_cyc" id="cus_cyc" size="3">（高さ, 間隔）<br>
+						<br>
+						山：<input type="radio" onclick="set();" name="type" id="yama" checked="checked"><br>
+						岩：<input type="radio" onclick="set();" name="type" id="iwa"><br>
+						海：<input type="radio" onclick="set();" name="type" id="umi"><br>
+						山追加：<input type="checkbox" onclick="set();" name="add" id="add"><br>
+						霧追加：<input type="checkbox" onclick="set();" name="fog" id="fog"><br>
+						<br>
+						<a href="http://www47.atpages.jp/sensq/blog/2013/08/04/211/" target="_blank">解説みたいなもの</a><br>
+						<a href="http://www.nicovideo.jp/watch/sm20236103">ほとんどそのままこれをパクってます</a>
+					</font>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

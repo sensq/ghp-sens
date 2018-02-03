@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import15.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+
+	<title>
+		マウスイベント
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				マウスイベント
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<font size = "3">
+					<form name="box">
+						重い人用：<input type="checkbox" onclick="set();" name="off" id="off"><br><br>
+					</form>
+					オブジェクトにマウス乗せると逃げる。<br>
+					乗せてクリックすると消えます。<br>
+					猶予5Fあるからそんなに難しくないはず。<br>
+					全部消してもコメント出るだけです。<br><br>
+					<button onclick="set();" id="set" name="set">やり直す</button><br><br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">解説みたいなもの</a>
+					</font>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import10-1-2.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		文字列テクスチャ1
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				文字列テクスチャ1
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<font size="3">
+					canvasに描画したものをテクスチャとして設定<br>
+					光源の影響を受けるようにできない問題は、<br>
+					文字テクスチャとして白い"■"を貼ることで対処<br><br>
+					
+					ここで文字列を変えられます。<br>
+					※機種依存文字も使えます。<br>
+					</font>
+					<input type="text" name="CTX" id="CTX" onkeyup="Button_ctx()">
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

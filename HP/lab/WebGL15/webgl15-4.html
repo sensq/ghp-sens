@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import15-4.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+
+	<title>
+		タッチザなんとか
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				タッチザなんとか
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<font size = "3">
+					<form name="box">
+						個数：<input type="text" name="number" id="number" onKeyup="set();" size="3"><br>
+						経過時間：<input type="text" name="time" id="time" size="6" style="background-color:#bbbbbb;"><br><br>
+						<input type="button" onClick="set();" value="やり直す" id="init" name="init"><br><br>
+					</form>
+					某ゲームのパクリ<br>
+					0を押すとタイマーがスタートします。<br>
+					数字の小さい順にクリックしていって下さい。<br><br>
+
+					個数は自由に変えられます。<br>
+					200個とかにしても案外詰まない。<br>
+					正方形にランダムに整列させるのは面倒そうなので妥協
+					</font>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

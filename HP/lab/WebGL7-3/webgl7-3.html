@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div7-3.css">
+	<script src="./import7-3.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		迷路もどき
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				迷路もどき
+				<button onclick="Button_Content();" id="Button_Content">技術的なこと</button>
+			</div>
+		</div>
+			
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right1">
+					カーソルで移動<br>
+					意味無いけどz,xで縦に伸びる。<br>
+					カメラの回転や拡大縮小は敢えて付けてあります。<br>
+					<b>ゴールしても何も起こりません。</b>
+				</div>
+				<div id="inner-right2" style="display:none">
+					基本的に<a href="../WebGL7-2/webgl7-2.html">衝突判定</a>の流用<br>
+					二次元配列で各マス一つ一つにフラグを付けて、移動先が移動可能かどうかで衝突を判定してる。<br>
+					別に凝ったもの作るつもりはなかったので構造は適当だけれど、テクスチャ付けてカメラを物体に追従するようにしたらなんか良い感じになった。カメラワーク大事<br>
+					サイズ大きくして構造凝ったり、カメラ近づけて視野狭めたり、衝突判定をz軸にも付けて3次元にしたり、時間をかければ色々と難易度あげられます。
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

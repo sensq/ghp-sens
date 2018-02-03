@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import6-2.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		多面体
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				Load obj（多面体）
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<font size="2">
+					マウスドラッグで回転<a href="./webgl1.html" id="dummy"></a><br>
+					ホイール（or S押しながらドラッグ）で拡大縮小<br>
+					右でドラッグ（or D押しながらドラッグ）で平行移動<br>
+					<a href="http://mitani.cs.tsukuba.ac.jp/polyhedron/">objデータはここのを使用</a><br>
+					<br>
+					ここに画像一覧にある名前（アルファベット1文字＋数字）を入れると図形が変わります。<br>
+					s06以外は水色っぽい色になります。<br>
+					</font>
+					<input type="text" name="OBJ" id="OBJ" onkeyup="Button_obj()"><br>
+					<font size="1">※一部しか上手く表示されないです。</font>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

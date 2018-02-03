@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import15-3.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+
+	<title>
+		キューブにリンク
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				キューブにリンク
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right">
+					<font size = "3">
+					<form name="box">
+						<label>回転止める：<input type="checkbox" onclick="set();" name="off" id="off"></label><br>
+						<input type="text" name="faceIndex" id="faceIndex" size="40" value="ここにURLが表示されます"><br><br>
+					</form>
+					キューブの各面にリンク貼ってみた。<br>
+					マウス乗せると↑にURLが表示される。<br>
+					クリックすると移動する。<br><br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">解説みたいなもの</a>
+					</font>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

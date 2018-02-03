@@ -1,0 +1,89 @@
+/* --- 全体 --- */
+html,body {
+    padding: 0;
+    background-color: #FCFCFC;
+    width: 98%;
+    height: 98%;
+}
+
+/* コンテナ */
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /* センタリング */
+}
+
+/* canvas */
+#canvas {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+
+/* ヘッダーとフッターの中身 */
+#inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    color: #EEFFEE;
+    font-weight: 600;
+    text-shadow: 3px 3px 2px #9ff;
+}
+
+/* ヘッダー */
+#header {
+    display: table;
+    background-color: #555555;
+    width: 100%;
+    height: 12%;
+    clear: both;
+}
+
+/* 左ペイン */
+#left {
+    background-color: #003300;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+/* 右ペイン */
+#right {
+    display: table;
+    background-color: #00EFEF;
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+#inner-right1 {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+	float: right;
+    text-align: left;
+    vertical-align: top;
+    font-size: 1em;
+}
+
+/* フッター */
+#footer {
+    display: table;
+    background-color: #555555;
+    width: 100%;
+    height: 12%;
+    clear: both;
+}
+
+/* センター */
+#center {
+    background-color: #FF0000;
+    width: 80%;
+    height: 76%;
+    margin: 0 auto; /* センタリング */
+}

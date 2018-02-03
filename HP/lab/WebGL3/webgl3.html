@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./import3.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		WebGL3
+	</title>
+</head>
+	
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				テクスチャ
+			</div>
+		</div>
+			
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right1">
+					<label><input type="checkbox" onclick="Button_Startstop();" name="Button_Startstop" id="Button_Startstop">回転を止める</label><br>
+					<button onclick="Button_Culling();" id="Button_Culling">内側を描画する</button><font size=2em>※ティーポットで押すと意味がわかりやすい。</font>
+					<hr>
+					色切り替え<br>
+					<label><input type="radio" onclick="Button_Color1();" name="Button_Color">デフォルト</label><br>
+					<label><input type="radio" onclick="Button_Color2();" name="Button_Color">レッド</label>
+					<label><input type="radio" onclick="Button_Color3();" name="Button_Color">グリーン</label><br>
+					<label><input type="radio" onclick="Button_Color4();" name="Button_Color">ブルー</label>
+					<label><input type="radio" onclick="Button_Color5();" name="Button_Color">イエロー</label><br>
+					<label><input type="radio" onclick="Button_Color6();" name="Button_Color">マゼンタ</label>
+					<label><input type="radio" onclick="Button_Color7();" name="Button_Color">シアン</label><br>
+					<label><input type="radio" onclick="Button_Color8();" name="Button_Color" checked="checked">ホワイト</label>
+					<label><input type="radio" onclick="Button_Color9();" name="Button_Color">ブラック</label>
+					<hr>
+					形状切り替え<br>
+					<label><input type="radio" onclick="Button_Shape1();" name="Button_Shape" checked="checked">トーラス</label>
+					<label><input type="radio" onclick="Button_Shape2();" name="Button_Shape">球体</label><br>
+					<label><input type="radio" onclick="Button_Shape3();" name="Button_Shape">立方体</label>
+					<label><input type="radio" onclick="Button_Shape4();" name="Button_Shape">ティーポット</label><br>
+					<label><input type="radio" onclick="Button_Shape5();" name="Button_Shape">トーラス結び目(3,7)型</label><br>
+					<a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%BC%E3%83%A9%E3%82%B9%E7%B5%90%E3%81%B3%E7%9B%AE" target="blank">Wikipedia:トーラス結び目</a><br>
+					<hr>
+					テクスチャ切り替え<br>
+						<label><input type="radio" onclick="Button_Texture1();" name="Button_Texture" checked="checked">海</label><br>
+						<label><input type="radio" onclick="Button_Texture2();" name="Button_Texture">カラーマップ1</label><br>
+						<label><input type="radio" onclick="Button_Texture3();" name="Button_Texture">カラーマップ2</label><br>
+						<label><input type="radio" onclick="Button_Texture4();" name="Button_Texture">ミク</label>
+				</div>
+				<div id="inner-right2" style="display:none;">
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

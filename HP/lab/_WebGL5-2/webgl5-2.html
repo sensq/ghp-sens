@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div5-2.css">
+	<script src="./import5-2.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		WebGL5-2
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				太陽系 ～修正版～
+				<button onclick="Button_Content();" id="Button_Content">注意書き</button>
+			</div>
+			</div>
+		<div id="canvas">
+		</div>
+		<div id="center" style="display:none">
+			<div id="cont">
+				<ul>
+					<li>円軌道を楕円軌道に修正
+					<li>それに伴って、各軌道を焦点が太陽の位置になるように修正
+					<li>面積速度一定はまだ
+					<li>自転の方向は謎
+					<li><a href="./kani.html">簡易版</a>
+				</ul>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="inner">
+				<button onclick="Button_Sun();" id="Button_Sun">太陽を中心にする</button>
+				<button onclick="Button_Mercury();" id="Button_Mercury">水星を中心にする</button>
+				<button onclick="Button_Venus();" id="Button_Venus">金星を中心にする</button>
+				<button onclick="Button_Earth();" id="Button_Earth">地球を中心にする</button>
+				<button onclick="Button_Moon();" id="Button_Moon">月を中心にする</button>
+				<button onclick="Button_Mars();" id="Button_Mars">火星を中心にする</button>
+				<button onclick="Button_Jupiter();" id="Button_Jupiter">木星を中心にする</button>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

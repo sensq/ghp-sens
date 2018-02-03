@@ -1,0 +1,72 @@
+/* --- 全体 --- */
+html,body {
+    padding: 0;
+    background-color: #FFFFFF;
+    width: 98%;
+    height: 98%;
+}
+
+/* コンテナ */
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /* センタリング */
+    overflow: hidden;
+}
+
+/* canvas */
+#canvas {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+}
+
+/* センター */
+#center {
+    background-color: #FF0000;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /* センタリング */
+}
+
+/* 左ペイン */
+#left {
+    background-color: #003300;
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+
+/* 右ペイン */
+#right {
+    display: table;
+    background-color: #FFFFFF;
+    float: right;
+    width: 20%;
+    height: 100%;
+}
+
+#inner-right1 {
+    display: table;
+    width: 100%;
+    height: 93%;
+	float: right;
+    text-align: left;
+    vertical-align: top;
+    font-size: 1em;
+}
+
+
+/* ヘッダーとフッターの中身 */
+#inner-right2 {
+    display: table;
+    width: 100%;
+    height: 7%;
+    float: right;
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: 600;
+    text-shadow: 3px 3px 2px #9ff;
+}

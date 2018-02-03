@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="../util/myTemplate.js"></script>
+	<script src="./webgl5-2.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43133177-1', 'atpages.jp');
+		ga('send', 'pageview');
+	</script>
+	<title>
+		太陽系のモデル
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				太陽系のモデル
+			</div>
+		</div>
+	<div id="center">
+		<div id="draw_area">
+		</div>
+		<div id="right">
+			<div id="inner-right">
+					・円軌道を楕円軌道に修正<br>
+					・それに伴って、各軌道を焦点が太陽の位置になるように修正<br>
+					・面積速度一定はまだ<br>
+					・自転の方向は謎<br>
+					<a href="./kani.html">簡易版</a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="inner">
+			<button onclick="cameraTarget(mesh_Sun);" id="targetSun">太陽を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mercury);" id="targetMercury">水星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Venus);" id="targetVenus">金星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Earth);" id="targetEarth">地球を中心にする</button>
+			<button onclick="cameraTarget(mesh_Moon);" id="targetMoon">月を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mars);" id="targetMars">火星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Jupiter);" id="targetJupiter">木星を中心にする</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>

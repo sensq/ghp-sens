@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div4-3.css">
+	<script src="./myTemplate.js"></script>
+	<script src="./webgl4-3.js"></script>
+	<script>
+	if(!Detector.webgl){
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
+		Detector.addGetWebGLMessage();
+	}
+	</script>
+
+	<title>
+		Model Changer
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				Model Changer
+				<button onclick="Button_Startstop();" id="Button_Startstop">回転を止める/動かす</button>
+			</div>
+		</div>
+		<div id="center">
+			<div id="draw_area">
+			</div>
+			<div id="right">
+				<div id="LeftMenu">
+					ローカルからテクスチャ読み込み<br>
+					<input type="file" id="loadImg" onchange="loadImage()">
+					<button onclick="loadImage()" id="update">読み込み</button>
+					<output id="list"></output><br>
+					<hr>
+				</div>
+				<div id="LeftDat">
+				</div>
+				<div id="RightDat">
+				</div>
+				<div id="conte" style="display:none">
+			  		<strong>大雑把な説明</strong>
+					<ul>
+			  			<li><strong>拡散光</strong>：物体の色
+			  			<li><strong>環境光</strong>：全体的な色
+			  			<li><strong>鏡面光</strong>：ハイライトの部分の色
+			  			<li><strong>放射光</strong>：物体自信が放つ色。蛍光色っぽくなる。
+			  			<li>ハイライトは消せない？ので値を極端に大きくして擬似的に消去
+			  			<li>下部のボタンを押すとサンプルの材質に変わる。<br>
+			  				サンプルは<a href="http://www.natural-science.or.jp/article/20110313211402.php"> natural scienceさん</a>から。<br>
+			  				（更に元のファイルはzipになってる）<br>
+			  			<li>上のボタンを左→右→右などのように押すとボタンと画面の表示が一致しなくなるのは仕様<br>
+			  				<s><small>（実害無いしめんどくさいし）</small></s>
+			  			<li>ライト消す→下のボタンで材質変える→ライト点けるとやるとライトが点かない。<br>
+			  				ライト点けるにした状態で適当に下のボタン押すと直る。
+			  		</ul>
+			  	</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="inner">
+				<button onclick="MS.white();">白</button>
+				<button onclick="MS.ruby();">ルビー</button>
+				<button onclick="MS.emerald();">エメラルド</button>
+				<button onclick="MS.jade();">翡翠</button>
+				<button onclick="MS.obsidian();">黒曜石</button>
+				<button onclick="MS.pearl();">真珠</button>
+				<button onclick="MS.turquoise();">トルコ石</button>
+				<button onclick="MS.brass();">真鍮</button>
+				<button onclick="MS.bronze();">青銅</button>
+				<button onclick="MS.chrome();">クローム</button>
+				<button onclick="MS.copper();">銅</button>
+				<button onclick="MS.gold();">金</button>
+				<button onclick="MS.silver();">銀</button><br>
+				<button onclick="MS.black_plastic();">プラスチック黒</button>
+				<button onclick="MS.cyan_plastic();">プラ水</button>
+				<button onclick="MS.green_plastic();">プラ緑</button>
+				<button onclick="MS.red_plastic();">プラ赤</button>
+				<button onclick="MS.white_plastic();">プラ白</button>
+				<button onclick="MS.yellow_plastic();">プラ黄</button>
+				<button onclick="MS.black_rubber();">ゴム黒</button>
+				<button onclick="MS.cyan_rubber();">ゴム水</button>
+				<button onclick="MS.green_rubber();">ゴム緑</button>
+				<button onclick="MS.red_rubber();">ゴム赤</button>
+				<button onclick="MS.white_rubber();">ゴム白</button>
+				<button onclick="MS.yellow_rubber();">ゴム黄</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

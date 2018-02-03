@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div7-2.css">
+	<script src="./import7-2.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		衝突判定
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				衝突判定
+			</div>
+		</div>
+			
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			
+			<div id="right">
+				<div id="inner-right1">
+					<label><input type="checkbox" onclick="mode();" name="mode" id="mode">CMYモード</label><br>
+					<button onclick="sort1();" id="sort">デフォルト</button>
+					<button onclick="sort2();" id="sort">横一列</button>
+					<button onclick="sort3();" id="sort">階段</button>
+					<button onclick="sort4();" id="sort">六芒星</button><br>
+					<b>物体同士が重ならないようになっています。</b><br>
+					それ以外は同じ<p>
+					
+					操作説明
+					<ul>
+						<li>基本的にカーソルで移動、zで上に伸びる、xで下に伸びる。
+						<li>Shift押しながらで<font color="#00dd00">緑</font>を操作
+						<li>Ctrl押しながらで<font color="#0000ff">青</font>を操作
+						<li>"Q"を押すと水、紫、黄を動かすモード（CMYモード）に。
+						<li>もう一度押すと赤、緑、青を動かすモードに。
+						<li>"Q"押下後、Shift押しながらで<font color="#ff00ff">紫</font>を操作
+						<li>"Q"押下後、Ctrl押しながらで<font color="#ffff00">黄</font>を操作
+					</ul>
+					概要・仕様
+					<ul>
+						<li>z,xは無限に伸びます。
+						<li>マウスで回転などできます。<br>
+							横に45度以上回転すると操作がわかりにくくなります。
+						<li><a href="./kani7-2.html">簡易版</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="inner">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

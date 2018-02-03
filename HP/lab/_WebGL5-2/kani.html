@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="kani_div.css">
+	<script src="./kani_import.js"></script>
+	
+	<!-- ソースコードハイライト用 -->
+	<script type="text/javascript" src="../../scripts/shCore.js"></script>
+	<script type="text/javascript" src="../../scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="../../styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="./shCoreEmacs.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = '../../scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+	<!-- ソースコードハイライト用 -->
+
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		てすと
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">太陽系の簡易版</div>
+		</div>
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			<div id="right">
+			<div id="inner-right1">
+				楕円の式使って位置を変化させている。<br>
+				自転がわかりやすいように立方体で表示<br>
+				<a href="./kani.js">ソースコード</a>110行目あたり
+				<pre class="brush: js">
+				var v = 20;		//公転の速度
+				mesh2.position = new THREE.Vector3(
+					a*e+a*Math.cos(v*Math.PI/180*step),
+					b*Math.sin(v*Math.PI/180*step),
+					0
+				);</pre><br>
+			</div>
+			<div id="inner-right2">
+			</div>
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+document.write('<script type="text/javascript" src="../three61/three.js"></script>');
+document.write('<script type="text/javascript" src="../three61/Detector.js"></script>');
+document.write('<script type="text/javascript" src="../three61/TrackballControls.js"></script>');
+document.write('<script type="text/javascript" src="../TeapotGeometry.js"></script>');
+document.write('<script type="text/javascript" src="../dat.gui.min.js"></script>');
+document.write('<script type="text/javascript" src="../stats.min.js"></script>');
+document.write('<script type="text/javascript" src="./MaterialSample.js"></script>');
+document.write('<script type="text/javascript" src="./myObject.js"></script>');
+document.write('<script type="text/javascript" src="./_webgl4.js"></script>');

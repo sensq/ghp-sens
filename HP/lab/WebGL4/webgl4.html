@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div4.css">
+	<script src="./import4.js"></script>
+	<script>
+	if(!Detector.webgl) Detector.addGetWebGLMessage();
+	</script>
+
+	<title>
+		WebGL4
+	</title>
+</head>
+
+<body onload="threeStart();">
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				詰め合わせ
+				<button onclick="Button_Content();" id="Button_Content">詳細を表示</button>
+				<button onclick="Button_Startstop();" id="Button_Startstop">回転を止める/動かす</button>
+				<button onclick="Button_Menu();" id="Button_Menu">光・形状・テクスチャ</button>
+			</div>
+		</div>
+		<div id="center">
+			<div id="left">
+				<div id="canvas">
+				</div>
+			</div>
+			<div id="right">
+				<div id="inner-right1">
+				</div>
+				<div id="inner-right2">
+				</div>
+				<div id="inner-right3" style="display:none">
+					テクスチャ切り替え<br>
+					<label><input type="radio" onclick="Button_Texture2();" name="Button_Texture">カラーマップ1</label>
+					<label><input type="radio" onclick="Button_Texture3();" name="Button_Texture">カラーマップ2</label><br>
+					<label><input type="radio" onclick="Button_Texture1();" name="Button_Texture">海</label>
+					<label><input type="radio" onclick="Button_Texture4();" name="Button_Texture">地球</label>
+					<label><input type="radio" onclick="Button_Texture5();" name="Button_Texture">ミク</label>
+					<label><input type="radio" onclick="Button_Texture6();" name="Button_Texture" checked="checked">無し</label>
+					<hr>
+					<label><input type="checkbox" onclick="Button_Light1();" id="Button_Light1" checked="checked">平行光源</label>
+				</div>
+				<div id="inner-right4" style="display:none">
+					形状切り替え<br>
+					<label><input type="radio" onclick="Button_Shape1();" name="Button_Shape">トーラス</label>
+					<label><input type="radio" onclick="Button_Shape2();" name="Button_Shape">球体</label><br>
+					<label><input type="radio" onclick="Button_Shape3();" name="Button_Shape">立方体</label>
+					<label><input type="radio" onclick="Button_Shape4();" name="Button_Shape" checked="checked">ティーポット</label>
+					<hr>
+					<label><input type="checkbox" onclick="Button_Light2();" id="Button_Light2" checked="checked">半球ライト</label>
+				</div>
+				<div id="conte" style="display:none">
+			  		<strong>大雑把な説明</strong>
+					<ul>
+			  			<li><strong>拡散光</strong>：物体の色
+			  			<li><strong>環境光</strong>：全体的な色
+			  			<li><strong>鏡面光</strong>：ハイライトの部分の色
+			  			<li><strong>放射光</strong>：物体自信が放つ色。蛍光色っぽくなる。
+			  			<li><strong>透明度</strong>：チェック入れて値を減らすと奥が透けて見えるようになる。<br>
+			  				チェック入れないと白っぽくなるだけ。
+			  			<li><strong>metal</strong>：チェック入れてneedsUpdateのチェック入れ直すとハイライト部分が変わる。
+			  			<li><strong>wrapAround</strong>：チェック入れてneedsUpdateのチェック入れ直すとなんか変わる。
+			  			<li>値は0～1で指定する。255段階で表示しようとしたけど上手くいかない。
+			  			<li>ハイライトは消せない？ので値を極端に大きくして擬似的に消去
+			  			<li>下部のボタンを押すとサンプルの材質に変わる。<br>
+			  				サンプルは<a href="http://www.natural-science.or.jp/article/20110313211402.php"> natural scienceさん</a>から。<br>
+			  				（更に元のファイルはzipになってる）<br>
+			  			<li>上のボタンを左→右→右などのように押すとボタンと画面の表示が一致しなくなるのは仕様<br>
+			  				<s><small>（実害無いしめんどくさいし）</small></s>
+			  			<li>ライト消す→下のボタンで材質変える→ライト点けるとやるとライトが点かない。<br>
+			  				ライト点けるにした状態で適当に下のボタン押すと直る。
+			  		</ul>
+			  	</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="inner">
+				<button onclick="MS.white();">白</button>
+				<button onclick="MS.ruby();">ルビー</button>
+				<button onclick="MS.emerald();">エメラルド</button>
+				<button onclick="MS.jade();">翡翠</button>
+				<button onclick="MS.obsidian();">黒曜石</button>
+				<button onclick="MS.pearl();">真珠</button>
+				<button onclick="MS.turquoise();">トルコ石</button>
+				<button onclick="MS.brass();">真鍮</button>
+				<button onclick="MS.bronze();">青銅</button>
+				<button onclick="MS.chrome();">クローム</button>
+				<button onclick="MS.copper();">銅</button>
+				<button onclick="MS.gold();">金</button>
+				<button onclick="MS.silver();">銀</button><br>
+				<button onclick="MS.black_plastic();">プラスチック黒</button>
+				<button onclick="MS.cyan_plastic();">プラ水</button>
+				<button onclick="MS.green_plastic();">プラ緑</button>
+				<button onclick="MS.red_plastic();">プラ赤</button>
+				<button onclick="MS.white_plastic();">プラ白</button>
+				<button onclick="MS.yellow_plastic();">プラ黄</button>
+				<button onclick="MS.black_rubber();">ゴム黒</button>
+				<button onclick="MS.cyan_rubber();">ゴム水</button>
+				<button onclick="MS.green_rubber();">ゴム緑</button>
+				<button onclick="MS.red_rubber();">ゴム赤</button>
+				<button onclick="MS.white_rubber();">ゴム白</button>
+				<button onclick="MS.yellow_rubber();">ゴム黄</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
