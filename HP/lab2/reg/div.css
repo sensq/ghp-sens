@@ -1,0 +1,63 @@
+html,body {
+	padding: 0px;
+	background-color: #fcfcfc;
+	width: 98%;
+	height: 98%;
+}
+
+div#container {
+	width: 100%;
+	height: 100%;
+}
+
+div#header {
+	display: table;
+	width: 100%;
+	height: 5%;
+	clear: both;
+}
+
+div#column {
+	width: 100%;
+	height: 92%;
+	min-width: 1400px;
+}
+
+div#left{
+	height: 100%;
+	float: left;
+	width: 500px;
+}
+
+div#right{
+	width: 59%;
+	text-align: left;
+	height: 100%;
+	float: right;
+	padding: 5px;
+	border-left: solid;
+	border-color: #dddddd;
+}
+
+div#Dat {
+	width: 470px;
+	height: 1px;
+}
+
+div#Color {
+	margin-top: 110px;
+	border: solid;
+	font-weight: bold;
+	background-color: #ffffff;
+	width: 492px;
+	border-color: #000000;
+}
+
+div#Result {
+	width: 470px;
+}
+
+h2 {
+	margin: 2px;
+	text-shadow:3px 3px 2px #ffff99;
+}

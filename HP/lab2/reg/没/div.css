@@ -1,0 +1,103 @@
+/* --- 全体 --- */
+html,body {
+	padding: 0px;
+	background-color: #fcfcfc;
+	width: 98%;
+	height: 98%;
+}
+
+/* コンテナ */
+div#container {
+	width: 100%;
+	height: 100%;
+}
+
+/* ヘッダー */
+div#header {
+	display: table;
+	background-color: #fcfcfc;
+	width: 100%;
+	height: 12%;
+	clear: both;
+}
+
+div#contents1 {
+	width: 100%;
+	height: 27%;
+	min-width: 600px;
+	min-height: 150px;
+}
+
+div#contents2 {
+	width: 100%;
+	height: 70%;
+	min-width: 1000px;
+}
+
+div#left{
+	width: 49%;
+	height: 100%;
+	float: left;
+}
+
+div#right{
+	width: 49%;
+	height: 100%;
+	float: right;
+	padding: 5px;
+	border-left: solid;
+	border-color: #dddddd;
+}
+
+div#inner1 {
+	display: table;
+	background-color: #ffffff;
+	width: 50%;
+	height: 0%;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 1.0em;
+}
+
+div#color {
+	border-style: solid;
+	font-weight: bold;
+	width: 100%;
+	border-color: #000000;
+}
+
+h2 {
+	margin: 3px;
+	text-shadow:3px 3px 2px #ffff99;
+}
+
+#imgbox {
+}
+
+#img {
+	display: table-cell;
+	background: #ddd;
+	border-style: double;
+	border-width: 5px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.5em;
+}
+
+/* フッター */
+div#footer {
+	display: table;
+	background-color: #555555;
+	width: 100%;
+	height: 12%;
+	clear: both;
+}
+
+/* URL */
+div#url {
+	display: table;
+	background-color: #fcfcfc;
+	width: 100%;
+	height: 12%;
+	clear: both;
+}

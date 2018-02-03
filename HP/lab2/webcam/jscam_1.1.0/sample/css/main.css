@@ -1,0 +1,47 @@
+body {
+	background: white;
+	color: black;
+}
+
+h1 {margin: 0;}
+h2 {margin: 0;}
+h3 {color: #00008F;}
+
+.mrgnTtl {
+	margin-bottom: 1em;
+
+	border-left: 0.5em solid #aaccff;
+	padding-left: 1.0em;
+
+	border-right: 0.2em solid #aaccff;
+	padding-right: 0.4em;
+
+	border-bottom: 0.2em solid #aaccff;
+	padding-bottom: 0.4em;
+	border-top: 0.2em solid #aaccff;
+	padding-top: 0.4em;
+}
+
+.b {
+	font-weight: bold;
+	color: #8F0000;
+}
+
+/* ============================== */
+div.boxOut {
+	line-height: 160%;
+	margin: 0 2em 0 2em;
+}
+div.block {
+	margin-left: 2em;
+	margin-bottom: 1em;
+}
+div.line {
+	text-indent: 1em;
+}
+
+div.boxText {
+	border: 2px solid #aaccff;
+	padding: 0.5em;
+	margin: 0.5em 0 0.5em 0;
+}

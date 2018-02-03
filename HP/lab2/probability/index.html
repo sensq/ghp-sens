@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./probability.js"></script>
+
+	<title>
+		ゲームの確率
+	</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<h2>ゲームの確率</h2>
+			<hr>
+		</div>
+		<b>1/nが少なくとも1回は起こる確率（余事象）</b><br>
+		<form name="hagure">
+		1回の確率：1/<input type="text" name="prob1" id="prob1" size="5" onkeyup="HaguremetalProbability1()"><br>
+		試行回数：<input type="text" name="trial1" id="trial1" size="5" onkeyup="HaguremetalProbability1()">
+		</form><br>
+		<div id="hagureResult">
+			少なくとも一回は起こる確率
+		</div>
+		<hr align=left width=350px>
+		
+		<b>回数求めるバージョン</b><br>
+		<form name="hagure">
+		1回の確率：1/<input type="text" name="prob2" id="prob2" size="5" onkeyup="HaguremetalProbability2()"><br>
+		少なくとも一回は起こる確率(%)：<input type="text" name="prob_result1" id="prob_result1" size="5" onkeyup="HaguremetalProbability2()">
+		</form><br>
+		<div id="hagureResult2">
+			必要な試行回数
+		</div>
+		<hr align=left width=350px>
+		
+		<form name="coupon">
+		<b>コンプ平均試行回数（クーポン収集問題）</b><br>
+		総数：<input type="text" name="series1" id="series1" size="5" onkeyup="CouponProbability()">
+		</form><br>
+		<div id="couponResult2">
+			オイラー定数
+		</div>
+		<hr align=left width=350px>
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{"kankore" : [
+    {
+        "category" : "駆逐艦",
+        "series" : [
+            { "series": "暁型",
+                "names" : [
+                    { "name": "暁"},
+                    { "name": "響"},
+                    { "name": "雷"},
+                    { "name": "電"}
+                ]
+            },
+            { "series": "吹雪型",
+                "names" : [
+                    { "name": "吹雪"},
+                    { "name": "白雪"},
+                    { "name": "初雪"},
+                    { "name": "深雪"},
+                    { "name": "叢雲"},
+                    { "name": "磯波"}
+                ]
+            }
+        ]
+    },
+    {
+        "category" : "軽巡洋艦",
+        "series" : [
+            { "series": "川内型",
+                "names" : [
+                    { "name": "川内"},
+                    { "name": "神通"},
+                    { "name": "那珂"}
+                ]
+            },
+            { "series": "長良型",
+                "names" : [
+                    { "name": "長良"},
+                    { "name": "五十鈴"},
+                    { "name": "名取"},
+                    { "name": "由良"}
+                ]
+            }
+        ]
+    },
+    {
+        "category" : "戦艦",
+        "series" : [
+            { "series": "金剛型",
+                "names" : [
+                    { "name": "金剛"},
+                    { "name": "比叡"},
+                    { "name": "榛名"},
+                    { "name": "霧島"}
+                ]
+            },
+            { "series": "扶桑型",
+                "names" : [
+                    { "name": "扶桑"},
+                    { "name": "山城"}
+                ]
+            }
+        ]
+    }
+]}

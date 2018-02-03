@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>「crocro.jscam」 - サンプル シンプル - クロノス・クラウン</title>
+	<script
+		type="text/javascript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+	></script>
+	<script type="text/javascript" src="jscam.js"></script>
+	<script language="javascript">
+		var cap;
+		$(document).ready(function() {
+			// JSカメラ初期化
+			crocro.jscam.initSwfCam();
+			crocro.jscam.setFilter(["bin", "label", "hidePaint"]);
+			cap = crocro.jscam.makeCaptureObject("cnvsCap");
+
+			// コールバックの設定
+			cap.setBackDataType(["pixelSwf", "labelData"]);
+			cap.setExtrFnc(function(resObj){	// 各戻り値ごとの処理
+				var resArr = [];
+				if ("labelData" in resObj) {
+					var ld = resObj.labelData;
+					resArr.push("labelData.length : " + ld.length);
+					for (var i = 0; i < ld.length; i ++) {
+						var s = "";
+						$.each(ld[i], function(k, v) {s += k + ":" + v + ", "});
+						resArr.push("labelData[" + i + "] : " + s);
+					}
+				}
+				$("#resData").html(resArr.join("<br>"));
+			})
+		});
+
+		// キャプチャ
+		function captureImg() {
+			cap.capture();		// キャプチャ
+		}
+	</script>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all">
+</head>
+<body bgcolor="#ffffff">
+	<h1 class="mrgnTtl">「crocro.jscam」 - サンプル シンプル - クロノス・クラウン</h1>
+
+	<div class="boxOut">
+		<div>
+			<div>最終更新 : 2012/01/20</div>
+			<div>作者 : <a href="http://crocro.com/">柳井 政和（クロノス・クラウン合同会社）</a></div>
+			<div>SNS : 
+				<A HREF="http://twitter.com/ruten"
+				><img src="http://crocro.com/android/pic/icon_twitter16.png" 
+				width=16 height=16 border=0> Twitter：ruten</A>
+				&nbsp;&nbsp;
+				<a href="https://plus.google.com/u/0/116690901806263644438/posts"
+				><img src="http://crocro.com/pic/icon_gplus16.gif" 
+				width=16 height=16 border=0> Google+：Yanai</a>
+				&nbsp;&nbsp;
+				<A HREF="http://www.facebook.com/profile.php?id=100001731365742"
+				><img src="http://crocro.com/pic/icon_facebook16.gif" 
+				width=16 height=16 border=0> Facebook：Yanai</A>
+			</div>
+		</div>
+		<br>
+		<div class="line">JavaScriptでWebカメラの画像を取得するライブラリ「crocro.jscam」は、<a href="http://crocro.com/">クロノス・クラウン</a>の<a href="http://crocro.com/html5/jscam/wiki.cgi">「crocro.jscam」のページ</a>から入手できます。</div>
+		<div class="line">本ページは、「crocro.jscam」の実行サンプルページです。本ページのソースコードは、「<a href="http://crocro.com/html5/jscam/wiki.cgi?p=sample_simple">サンプル シンプル - ソースコード</a>」に公開しています。</div>
+		<div class="line">全てのサンプルを見たい場合は<a href="index.html">「crocro.jscam - サンプル」</a>をご覧ください。</div>
+		<br>
+		<div>
+			<span style="font-weight: bold;">推奨ブラウザ：Chrome、Firefox、(IE9以上)</span>
+		</div>
+		<div class="boxText">
+			<div>
+				<span style="font-weight: bold;">説明1：</span>「キャプチャ」ボタンのクリックで、Webカメラをキャプチャします。また、ラベルの情報も取得します。
+			</div>
+		</div>
+	</div>
+
+
+<!--#include virtual="ad.inc"-->
+
+
+
+	<div class="boxOut">
+		<script language="javascript">
+			crocro.jscam.write();
+		</script>
+		<br>
+		<input type="button" onClick="captureImg()" value="キャプチャ">
+		<br>
+		<canvas id="cnvsCap" width="320" height="240"></canvas>
+		<div id="resData"></div>
+	</div>
+
+
+
+<!--#include virtual="ad.inc"-->
+<!--#include virtual="/cgi-bin/tool/insert/footer_utf8.cgi"-->
+</body>
+</html>
+<!--#include virtual="/cgi-bin/analyze/top/log.pl"-->

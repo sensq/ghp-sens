@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43133177-1', 'atpages.jp');
+		ga('send', 'pageview');
+	</script>
+	<script src="./js.js"></script>
+
+	<title>
+		HTML5で画像処理 -動画版-
+	</title>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<div id="inner">
+			画像処理 -動画版-
+		</div>
+	</div>
+		ローカルから動画を読み込み<br>
+		<font size="2">
+		※再生はされるけど色調の変換はできません。<br>
+		※動画はサーバに保存されたりはしません。</font><br>
+		<input type="file" id="loadImg" onchange="loadImg()">
+		<button onclick="loadImg()" id="update">読み込み</button>
+		<output id="list"></output><br>
+		<font size="2">URLで指定：</font><input type="text" id="URL" size="60" onChange="url();">
+		<button onclick="url()" id="urlButton">読み込み</button>
+		<hr>
+		<div id="cont">
+			クロームかOperaだと上下キーやマウスで1ずつ数値変えられて便利<br>
+			色調<br>
+			<button onclick="imgConvert.init();" id="init">元に戻す</button>
+			<button onclick="imgConvert.negaposi();" id="negaposi">ネガポジ反転</button>
+			<button onclick="imgConvert.gray();" id="gray">グレースケール</button>
+			<button onclick="imgConvert.sepia();" id="sepia">セピア調</button>
+			<button onclick="imgConvert.edge();" id="edge">エッジ抽出</button>
+			<button onclick="imgConvert.gamma();" id="gamma">γ補正(※重い)</button>
+			<button onclick="imgConvert.gamma2();" id="gamma2">γ補正(LUT版)</button>
+			<input type="number" id="gammaValue" size="3" min="0" step="0.05" onChange="imgConvert.gamma2();" placeholder="2.2"><font size="2">γ値</font>
+			<button onclick="imgConvert.bright();" id="bright">明暗</button>
+			<input type="number" id="brightValue" size="3" min="0" onChange="imgConvert.bright();" placeholder="150">%
+			<button onclick="imgConvert.transparent();" id="transparent">透過</button>
+			<input type="number" id="opacity" size="3" min="0" max="255" onChange="imgConvert.transparent();" placeholder="128"><font size="2">α値</font>
+			<br>
+			幾何<br>
+			<button onclick="imgConvert.hmirror();" id="hmirror">水平反転</button>
+			<button onclick="imgConvert.vmirror();" id="vmirror">垂直反転</button>
+			<button onclick="imgConvert.vhmirror();" id="vhmirror">両方反転</button>
+<!-- 			<button onclick="imgConvert.rotation();" id="rotation">回転</button>
+			<input type="number" id="theta" size="3" min="0" max="360" onChange="imgConvert.rotation();" placeholder="45">度 -->
+			<button onclick="imgConvert.size();" id="size">拡縮</button>
+			幅：<input type="number" id="rateW" size="3" min="0" max="200" onChange="imgConvert.size();" placeholder="50">%
+			高さ：<input type="number" id="rateH" size="3" min="0" max="200" onChange="imgConvert.size();" placeholder="75">%
+			<font size="2">※微妙に不具合有り</font>
+<!-- 			<br>
+			<label><input type="checkbox" id="invisible" onChange="imgConvert.invisible();">入力と出力の位置を入れ替え</label> -->
+			<br>
+			<a href="../../blog/2013/09/07/293/"><i><big><b>解説</b></big></i></a>
+		</div>
+
+		<hr>
+		<button onMouseDown="video_control.skip(-0.1);" onMouseUp="onMouse=false;" id="rew"><<</button>
+		<button onclick="video_control.pause();" id="pause">　再生　</button>
+		<button onclick="video_control.stop();" id="stop">■</button>
+		<button onMouseDown="video_control.skip(0.1);" onMouseUp="onMouse=false;" id="skip">>></button>
+		<button onClick="video_control.rate();" id="RateButton">再生速度変更</button><input type="number" id="playRate" size="3" min="0.5" max="4.0" placeholder="1.0" step="0.1" onChange="video_control.rate();">
+		<label><input type="checkbox" onclick="video_control.mute();" id="mute"><font size="2">ミュート</font></label>
+		<br>
+		<video id="video" src="GN.mp4" controls>
+		</video>
+		<canvas id="img">
+			お使いのブラウザには対応していません。<br>
+			Chrome, Firefox, Opera, Safariでの動作は確認しています。<br>
+			まさかまだ<b>Internet Explorer（通称IE）</b><img src="IE.jpeg" width="40px" height="40px">をお使いになられているのでしょうか？
+		</canvas>
+		<canvas id="outputImg">
+		</canvas>
+	</div>
+</body>
+</html>

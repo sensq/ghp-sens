@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43133177-1', 'atpages.jp');
+		ga('send', 'pageview');
+	</script>
+	<script src="./js.js"></script>
+
+	<title>
+		HTML5で画像処理
+	</title>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<div id="inner">
+			フィルタリング＋α
+		</div>
+	</div>
+		ローカルから画像を読み込み<br>
+		<font size="2">
+		※画像が表示されない場合は更新するか読み込みボタンを押して下さい。（100×100から500×500程度推奨）<br>
+		※画像はサーバに保存されたりはしません。<br>
+		※<i>描画エリアにドラッグ＆ドロップでも読み込めます。</i></font><br>
+		<input type="file" id="loadImg" onchange="loadImg()">
+		<button onclick="loadImg()" id="update">読み込み</button>
+		<output id="list"></output>
+		<hr>
+		<div id="cont">
+			<button onclick="CV.init();" id="init">最初に戻す</button>
+			<a href="http://www47.atpages.jp/sensq/blog/2014/01/25/603/"><i>使い方</i></a>　
+			<a href="http://www47.atpages.jp/sensq/blog/2013/10/26/445/"><i>詳しい解説</i></a>
+			<br>
+			<div id="menu">
+				Menu：<button onclick="menu.all();" id="Mall">ALL</button>
+				<label><input type="checkbox" onclick="menu('siki');" id="Msiki">色調</label>
+				<label><input type="checkbox" onclick="menu('edge');" id="Medge">エッジ</label>
+				<label><input type="checkbox" onclick="menu('pix');" id="Mpix">平滑化</label>
+				<label><input type="checkbox" onclick="menu('hsv');" id="Mhsv">HSV</label>
+				<label><input type="checkbox" onclick="menu('kido');" id="Mkido">輝度</label>
+				<label><input type="checkbox" onclick="menu('kika');" id="Mkika">幾何</label>
+				<label><input type="checkbox" onclick="menu('histgram');" id="Mhistgram">ヒストグラム</label>
+			</div>
+			<hr>
+			<div id="siki">
+				<font size="2">色調：</font>
+				<button onclick="CV.negaposi();" id="negaposi">ネガポジ反転</button>
+				<button onclick="CV.gray();" id="gray">グレースケール</button>
+				<button onclick="CV.sepia();" id="sepia">セピア調</button>
+				<button onclick="CV.binary();" id="binary">二値化</button>
+				<input type="text" id="threshold" size="3" step="1" onChange="CV.binary();" placeholder="160"><font size="2">閾値</font>
+				<button onclick="CV.rgb('R');" id="rgb_R">赤抽出</button>
+				<button onclick="CV.rgb('G');" id="rgb_G">緑抽出</button>
+				<button onclick="CV.rgb('B');" id="rgb_B">青抽出</button>
+			</div>
+			<div id="edge" style="display:none">
+				<font size="2">エッジ検出：</font>
+				<button onclick="CV.edge2();" id="edge2">4近傍</button>
+				<button onclick="CV.edge();" id="edge">8近傍</button>
+				<button onclick="CV.sobel();" id="sobel">ソーベル</button>
+				<input type="number" id="course" size="1" min="0" max="9" onChange="CV.sobel();" placeholder="8">
+				開始方向（テンキーの数字の位置に対応）
+			</div>
+			<div id="pix">
+				<font size="2">平滑化：</font>
+				<button onclick="CV.median();" id="median">メディアン</button>
+				<button onclick="CV.smoothing(3);" id="smoothing">平滑化(3x3)</button>
+				<button onclick="CV.smoothing(5);" id="smoothing5">5</button>
+				<button onclick="CV.smoothing(7);" id="smoothing7">7</button>
+				<button onclick="CV.gaussian();" id="gaussian3">ガウシアン(3x3)</button>
+				<button onclick="CV.gaussian2();" id="gaussian5">5</button>
+				<button onclick="CV.shuffle(3);" id="shuffle3">シャッフル(3x3)</button>
+				<button onclick="CV.shuffle(5);" id="shuffle5">5</button>
+				<button onclick="CV.shuffle(7);" id="shuffle7">7</button>
+				<br>
+				<button onclick="CV.pixelization(3);" id="pixelization">モザイク(3x3)</button>
+				<button onclick="CV.pixelization(7);" id="pixelization5">7</button>
+				<button onclick="CV.pixelization(25);" id="pixelization7">25</button>
+				<button onclick="CV.blur(5, 'horizon');" id="blurH">水平ブラー(5x5)</button>
+				<button onclick="CV.blur(11, 'horizon');" id="blurH">11</button>
+				<button onclick="CV.blur(5, 'tiltL');" id="blurL">左斜めブラー(5x5)</button>
+				<button onclick="CV.blur(11, 'tiltL');" id="blurL">11</button>
+				<button onclick="CV.sharp();" id="sharp">シャープ</button>
+				<input type="text" id="sharpValue" size="2" step="1" onChange="CV.sharp();" placeholder="1"><font size="2">強さ</font>
+			</div>
+			<div id="hsv">
+				<font size="2">HSV：</font>
+				<button onclick="CV.hsv('hue');" id="hue">H増減</button>
+				<input type="text" id="hueValue" size="3" step="1" onChange="CV.hsv('hue');" placeholder="60"><font size="2">H</font>
+				<button onclick="CV.hsv('sat');" id="sat">S増減</button>
+				<input type="text" id="satValue" size="3" step="1" onChange="CV.hsv('sat');" placeholder="20"><font size="2">S</font>
+				<button onclick="CV.hsv('vol');" id="vol">V増減</button>
+				<input type="text" id="volValue" size="3" step="1" onChange="CV.hsv('vol');" placeholder="20"><font size="2">V</font>
+				<br>
+				<font size="2">色抽出：</font>
+				<button onclick="CV.hsv('cut');" id="cut">カット</button>
+				<button onclick="CV.hsv('white');" id="white">白色化</button>
+				<button onclick="CV.hsv('black');" id="black">黒色化</button>
+				<button onclick="CV.hsv('extractH');" id="extractH">色相変換</button>
+				<input type="number" id="convHValue" size="3" min="0" step="10" placeholder="150" onChange="CV.hsv('extractH');"><font size="2">増分</font>
+	<!-- 			<button onclick="CV.hsv('extractS');" id="extractS">彩度変換</button>
+				<input type="number" id="convSValue" size="3" min="0" step="10" placeholder="150" onChange="CV.hsv('extractS');"><font size="2">増分</font>
+				<button onclick="CV.hsv('extractV');" id="extractV">明度変換</button>
+				<input type="number" id="convVValue" size="3" min="0" step="10" placeholder="150" onChange="CV.hsv('extractV');"><font size="2">増分</font> -->
+				<br>
+				<font size="2">抽出範囲：</font>
+				H：
+				<input type="text" id="hueStart" size="3" step="1" placeholder="80"><font size="2">-</font>
+				<input type="text" id="hueEnd" size="3" step="1" placeholder="180"><font size="2"></font>
+				S：
+				<input type="text" id="satStart" size="3" step="1" placeholder="100"><font size="2">-</font>
+				<input type="text" id="satEnd" size="3" step="1" placeholder="255"><font size="2"></font>
+				V：
+				<input type="text" id="volStart" size="3" step="1" placeholder="80"><font size="2">-</font>
+				<input type="text" id="volEnd" size="3" step="1" placeholder="255"><font size="2"> ※出力画像クリックで自動入力</font>
+			</div>
+			<div id="kido">
+				<font size="2">輝度：</font>
+				<button onclick="CV.gammaLUT();" id="gammaLUT">γ補正</button>
+				<input type="number" id="gammaValue" size="3" min="0" step="0.05" onChange="CV.gammaLUT();" placeholder="1.5"><font size="2">γ値</font>
+				<button onclick="CV.bright();" id="bright">明暗</button>
+				<input type="number" id="brightValue" size="3" min="0" onChange="CV.bright();" placeholder="150">%
+				<button onclick="CV.transparent();" id="transparent">透過</button>
+				<input type="number" id="opacity" size="3" min="0" max="255" onChange="CV.transparent();" placeholder="128"><font size="2">閾値</font>
+			</div>
+			<div id="kika" style="display:none">
+				<font size="2">幾何：</font>
+				<button onclick="CV.hmirror();" id="hmirror">水平反転</button>
+				<button onclick="CV.vmirror();" id="vmirror">垂直反転</button>
+				<button onclick="CV.rotation();" id="rotation">回転</button>
+				<input type="number" id="theta" size="3" min="0" max="360" onChange="CV.rotation();" placeholder="45">度
+				<button onclick="CV.small();" id="small">拡縮</button>
+				<input type="number" id="rate" size="3" min="0" max="200" onChange="CV.small();" placeholder="75">%
+			</div>
+			<div id="histgram" style="display:none">カラーヒストグラム描画領域
+			</div>
+			<hr>
+			<div id="other">
+				<label><input type="checkbox" id="change" onChange="CV.change();">入出力の位置入替</label>
+				<label><input type="checkbox" id="resize">読込時に強制リサイズ</label>
+				<label><input type="checkbox" id="copy">重ね掛け</label>
+				<button onclick="CV.hist();" id="hist">ヒストグラム再計算</button>
+				<button onclick="CV.undo();" id="undo">戻る</button>
+				<button onclick="CV.save();" id="save">保存</button>
+			</div>
+			<div id="info">
+				R:0　G:0　B:0　A:0　　H:0　S:0　V:0
+			</div>
+			<div id="dummy">　</div>
+		</div>
+		<hr>
+		<canvas id="img">
+			お使いのブラウザには対応していません。<br>
+			Chrome, Firefox, Opera, Safariでの動作は確認しています。<br>
+			まさかまだ<b>Internet Explorer（通称IE）</b><img src="IE.jpeg" width="40px" height="40px">をお使いになられているのでしょうか？
+		</canvas>
+		<canvas id="outputImg">
+		画像描画領域
+		</canvas>
+		<canvas id="tst">
+		画像描画領域
+		</canvas>
+	</div>
+</body>
+</html>

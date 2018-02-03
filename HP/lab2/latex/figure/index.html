@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<link rel="stylesheet" type="text/css" href="div.css">
+	<script src="./js.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43133177-1', 'atpages.jp');
+		ga('send', 'pageview');
+	</script>
+	<title>
+		画像貼付テンプレ生成
+	</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="inner">
+				画像貼付テンプレ生成
+			</div>
+		</div>
+		<div id="plane">
+			<b>【目的】</b><br>
+			ベクタ形式じゃない普通の画像を貼付するとき、サイズを手入力する手間を無くそう！<br>
+			ついでにテンプレコピペやファイル名入力する手間も無くそう！<br>
+			<b>【使い方】</b><br>
+			1.ボックスに画像をドラッグ&ドロップ。<br>
+			2.テンプレが生成される。<br>
+			3.ctrl+A, ctrl+Cでコピペ終了。楽！！<br>
+			直にソース書き換えた方が早いけど、一応キャプションなどをあらかじめ設定しておけます。
+			<hr>
+		</div>
+		<div id="LaTeX">
+			<form name="textbox"><textarea name="textbox" type="text" id="textbox" rows="7" cols="80">
+ここに画像ファイルをドロップしてください。
+※画像はサーバに保存されたりはしません。
+			</textarea>
+			</form>
+		</div>
+		【オプション】<br>
+		ディレクトリ：<input type="text" size="30" id="folder">（相対パス生成に使用）<br>
+		キャプション：<input type="text" size="30" id="caption"><br>
+		ラベル：<input type="text" size="16" id="label">
+		<br>
+		縮尺：<input type="text" size="4" id="scale">
+		縦位置：<input type="text" size="4" id="vertical">
+	</div>
+</body>
+</html>
