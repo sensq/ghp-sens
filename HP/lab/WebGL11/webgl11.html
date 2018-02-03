@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import11.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 	
 	<title>
-		Blender�ǂݍ���
+		Blender読み込み
 	</title>
 </head>
 	
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				Blender�ǂݍ���
+				Blender読み込み
 			</div>
 		</div>
 		
@@ -33,16 +33,16 @@
 			<div id="right">
 				<div id="inner-right">
 					<font size="2">
-					Blender�ō�������f����ǂݍ���ŕ\�����Ă邾���B<br>
-					Blender��three.js�p��JSON���G�N�X�|�[�g�ł���悤�ɐݒ肵�AJSON��three.js�œǂݍ��ށB<br>
-					���̃Z���N�g�{�b�N�X�Ń��f���ς����܂��B<br>
+					Blenderで作ったモデルを読み込んで表示してるだけ。<br>
+					Blenderでthree.js用のJSONをエクスポートできるように設定し、JSONをthree.jsで読み込む。<br>
+					↓のセレクトボックスでモデル変えられます。<br>
 					<select name="object">
-						<option name="model" id="model" onclick="Button('zatsu.js', 3)">�e�X�g�p</option>
-						<option name="model" id="model" onclick="Button('Post.js', 11)">�|�X�g</option>
-						<option name="model" id="model" onclick="Button('Post2.js', 12)">�|�X�g+����</option>
+						<option name="model" id="model" onclick="Button('zatsu.js', 3)">テスト用</option>
+						<option name="model" id="model" onclick="Button('Post.js', 11)">ポスト</option>
+						<option name="model" id="model" onclick="Button('Post2.js', 12)">ポスト+平面</option>
 					</select>
 					<br><br>
-					<a href="http://cgzoo.seesaa.net/">�|�X�g�͂�����̂��g�킹�Ă��炢�܂����B</a>
+					<a href="http://cgzoo.seesaa.net/">ポストはこちらのを使わせてもらいました。</a>
 					</font>
 				</div>
 			</div>

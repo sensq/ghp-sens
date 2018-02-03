@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="../util/myTemplate.js"></script>
 	<script src="./webgl5-2.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -21,7 +21,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		���z�n�̃��f��
+		太陽系のモデル
 	</title>
 </head>
 
@@ -29,7 +29,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				���z�n�̃��f��
+				太陽系のモデル
 			</div>
 		</div>
 	<div id="center">
@@ -37,23 +37,23 @@
 		</div>
 		<div id="right">
 			<div id="inner-right">
-					�E�~�O����ȉ~�O���ɏC��<br>
-					�E����ɔ����āA�e�O�����œ_�����z�̈ʒu�ɂȂ�悤�ɏC��<br>
-					�E�ʐϑ��x���͂܂�<br>
-					�E���]�̕����͓�<br>
-					<a href="./kani.html">�ȈՔ�</a>
+					・円軌道を楕円軌道に修正<br>
+					・それに伴って、各軌道を焦点が太陽の位置になるように修正<br>
+					・面積速度一定はまだ<br>
+					・自転の方向は謎<br>
+					<a href="./kani.html">簡易版</a>
 			</div>
 		</div>
 	</div>
 	<div id="footer">
 		<div id="inner">
-			<button onclick="cameraTarget(mesh_Sun);" id="targetSun">���z�𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Mercury);" id="targetMercury">�����𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Venus);" id="targetVenus">�����𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Earth);" id="targetEarth">�n���𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Moon);" id="targetMoon">���𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Mars);" id="targetMars">�ΐ��𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Jupiter);" id="targetJupiter">�ؐ��𒆐S�ɂ���</button>
+			<button onclick="cameraTarget(mesh_Sun);" id="targetSun">太陽を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mercury);" id="targetMercury">水星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Venus);" id="targetVenus">金星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Earth);" id="targetEarth">地球を中心にする</button>
+			<button onclick="cameraTarget(mesh_Moon);" id="targetMoon">月を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mars);" id="targetMars">火星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Jupiter);" id="targetJupiter">木星を中心にする</button>
 		</div>
 	</div>
 </div>

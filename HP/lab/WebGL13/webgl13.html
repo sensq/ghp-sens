@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import13.js"></script>
 	<script type="text/javascript" src="./js/OBJLoader58.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 
 	<title>
-		�����_���n�`����
+		ランダム地形生成
 	</title>
 </head>
 	
@@ -21,7 +21,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�����_���n�`����
+				ランダム地形生成
 			</div>
 		</div>
 		
@@ -35,25 +35,25 @@
 				<div id="inner-right">
 					<form name="box">
 					<font size="3">
-						�g�ݍ��킹�ɂ���Č`�󂪕ς��܂��B<br>
-						Size1�F<input type="checkbox" onclick="set();" name="size1" id="size1">�i10, 64�j<br>
-						Size2�F<input type="checkbox" onclick="set();" name="size2" id="size2">�i8, 32�j<br>
-						Size3�F<input type="checkbox" onclick="set();" name="size3" id="size3">�i6, 16�j<br>
-						Size4�F<input type="checkbox" onclick="set();" name="size4" id="size4">�i4, 8�j<br>
-						Size5�F<input type="checkbox" onclick="set();" name="size5" id="size5">�i2, 4�j<br>
-						Size6�F<input type="checkbox" onclick="set();" name="size6" id="size6">�i1, 2�j<br>
-						�J�X�^���F<input type="checkbox" onclick="set();" name="size7" id="size7">
+						組み合わせによって形状が変わります。<br>
+						Size1：<input type="checkbox" onclick="set();" name="size1" id="size1">（10, 64）<br>
+						Size2：<input type="checkbox" onclick="set();" name="size2" id="size2">（8, 32）<br>
+						Size3：<input type="checkbox" onclick="set();" name="size3" id="size3">（6, 16）<br>
+						Size4：<input type="checkbox" onclick="set();" name="size4" id="size4">（4, 8）<br>
+						Size5：<input type="checkbox" onclick="set();" name="size5" id="size5">（2, 4）<br>
+						Size6：<input type="checkbox" onclick="set();" name="size6" id="size6">（1, 2）<br>
+						カスタム：<input type="checkbox" onclick="set();" name="size7" id="size7">
 						<input type="text" onkeyup="set();" name="cus_h" id="cus_h" size="3">
-						<input type="text" onkeyup="set();" name="cus_cyc" id="cus_cyc" size="3">�i����, �Ԋu�j<br>
+						<input type="text" onkeyup="set();" name="cus_cyc" id="cus_cyc" size="3">（高さ, 間隔）<br>
 						<br>
-						�R�F<input type="radio" onclick="set();" name="type" id="yama" checked="checked"><br>
-						��F<input type="radio" onclick="set();" name="type" id="iwa"><br>
-						�C�F<input type="radio" onclick="set();" name="type" id="umi"><br>
-						�R�ǉ��F<input type="checkbox" onclick="set();" name="add" id="add"><br>
-						���ǉ��F<input type="checkbox" onclick="set();" name="fog" id="fog"><br>
+						山：<input type="radio" onclick="set();" name="type" id="yama" checked="checked"><br>
+						岩：<input type="radio" onclick="set();" name="type" id="iwa"><br>
+						海：<input type="radio" onclick="set();" name="type" id="umi"><br>
+						山追加：<input type="checkbox" onclick="set();" name="add" id="add"><br>
+						霧追加：<input type="checkbox" onclick="set();" name="fog" id="fog"><br>
 						<br>
-						<a href="http://www47.atpages.jp/sensq/blog/2013/08/04/211/" target="_blank">����݂����Ȃ���</a><br>
-						<a href="http://www.nicovideo.jp/watch/sm20236103">�قƂ�ǂ��̂܂܂�����p�N���Ă܂�</a>
+						<a href="http://www47.atpages.jp/sensq/blog/2013/08/04/211/" target="_blank">解説みたいなもの</a><br>
+						<a href="http://www.nicovideo.jp/watch/sm20236103">ほとんどそのままこれをパクってます</a>
 					</font>
 					</form>
 				</div>

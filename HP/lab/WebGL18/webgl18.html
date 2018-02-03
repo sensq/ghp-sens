@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl18.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		����e�N�X�`��
+		動画テクスチャ
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				����e�N�X�`��
+				動画テクスチャ
 			</div>
 		</div>
 		
@@ -38,25 +38,25 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					<label><input type="checkbox" onclick="updateScene();" id="sphere"><font size="2">���̂ɂ���</font></label>
+					<label><input type="checkbox" onclick="updateScene();" id="sphere"><font size="2">球体にする</font></label>
 					<br>
-					<button onclick="video_control.pause();" id="pause">�@�ꎞ��~�@</button>
-					<button onclick="video_control.stop();" id="stop">��</button>
-					<button onClick="video_control.rate();" id="RateButton">�Đ����x�ύX</button><input type="number" id="playRate" size="3" min="0.5" max="4.0" placeholder="1.0" step="0.1" onChange="video_control.rate();">
-					<label><input type="checkbox" onclick="video_control.mute();" id="mute"><font size="2">�~���[�g</font></label>
+					<button onclick="video_control.pause();" id="pause">　一時停止　</button>
+					<button onclick="video_control.stop();" id="stop">■</button>
+					<button onClick="video_control.rate();" id="RateButton">再生速度変更</button><input type="number" id="playRate" size="3" min="0.5" max="4.0" placeholder="1.0" step="0.1" onChange="video_control.rate();">
+					<label><input type="checkbox" onclick="video_control.mute();" id="mute"><font size="2">ミュート</font></label>
 					<br>
 					<input type="range" id="playback" disabled>
 					<br>
 					<div id="time"></div>
 					<br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/09/16/330/" target="_blank">����݂����Ȃ���</a>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/09/16/330/" target="_blank">解説みたいなもの</a>
 				</div>
 			</div>
 		</div>
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">�g�b�v�ɖ߂�</font></a>
+			<a href="../top2.html"><font size="4">トップに戻る</font></a>
 			</div>
 		</div>
 	</div>

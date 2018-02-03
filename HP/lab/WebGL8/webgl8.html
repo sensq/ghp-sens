@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script type="text/javascript" src="../../scripts/shCore.js"></script>
 	<script type="text/javascript" src="../../scripts/shBrushLatex.js"></script>
 	<link type="text/css" rel="stylesheet" href="../../styles/shCore.css"/>
@@ -17,7 +17,7 @@
 	</script>
 
 	<title>
-		�L���[�u�}�b�s���O
+		キューブマッピング
 	</title>
 </head>
 
@@ -25,15 +25,15 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�L���[�u�}�b�s���O
-				<button onclick="Button_Content();" id="Button_Content">����</button>
+				キューブマッピング
+				<button onclick="Button_Content();" id="Button_Content">説明</button>
 			</div>
 		</div>
 		<div id="canvas">
 		</div>
 		<div id="center" style="display:none">
-			mesh�œǂݍ���material��6�ʂ̉摜��ݒ肵�Ă����B<br>
-			�ݒ肷�鏇�Ԃ́A�E�������と�������ʁ����<br>
+			meshで読み込むmaterialに6面の画像を設定しておく。<br>
+			設定する順番は、右→左→上→下→正面→後ろ<br>
 			<pre class="brush: tex">
 				var materials = [
 					new THREE.MeshLambertMaterial({map:texture_px,side:2}),
@@ -53,8 +53,8 @@
 		</div>
 		<div id="footer">
 			<div id="inner">
-				<button onclick="Button_inside();" id="Button_inside">�������猩��</button>
-				<button onclick="Button_outside();" id="Button_outside">�O�����猩��</button>
+				<button onclick="Button_inside();" id="Button_inside">内側から見る</button>
+				<button onclick="Button_outside();" id="Button_outside">外側から見る</button>
 			</div>
 			</div>
 		</div>

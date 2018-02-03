@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl21.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		Blender�A�j���[�V����
+		Blenderアニメーション
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				Blender�A�j���[�V����
+				Blenderアニメーション
 			</div>
 		</div>
 		
@@ -38,27 +38,27 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					�y��������z<br>
-					Walk Through�̓J�[�\���L�[�œ�������B<br>
-					Collision�͍�]����̂����Ă邾���B<br>
-					z�L�[�Ńt���X�N���[����
+					【操作説明】<br>
+					Walk Throughはカーソルキーで動かせる。<br>
+					Collisionは坂転がるのを見てるだけ。<br>
+					zキーでフルスクリーン化
 					<hr>
-					���f���؂�ւ�<br>
+					モデル切り替え<br>
 					<input type="button" onclick="updateObject.move();" name="move" value="Walk Through"><br>
 					<input type="button" onclick="updateObject.collision();" name="collision" value="Collision">
 					
 					<hr>
-					�y����z<br>
-					Blender�ō�������f���ƃA�j���[�V������ǂݍ���ŕ`��<br>
-					�ǂݍ��݂Ɏ኱���Ԃ������邱�Ƃ�����܂��B<br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/10/18/428/">�R�[�h�̉��</a>
+					【解説】<br>
+					Blenderで作ったモデルとアニメーションを読み込んで描画<br>
+					読み込みに若干時間がかかることがあります。<br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/10/18/428/">コードの解説</a>
 				</div>
 			</div>
 		</div>
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">�g�b�v�ɖ߂�</font></a>
+			<a href="../top2.html"><font size="4">トップに戻る</font></a>
 			</div>
 		</div>
 	</div>

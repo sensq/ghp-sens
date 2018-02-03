@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -21,14 +21,14 @@
 		<div>parameters is an optional object with properties defining the renderer's behaviour. The constructor also accepts no parameters at all. In all cases, it will assume sane defaults when parameters are missing.</div>
 
 		<div>
-		canvas — A [page:Canvas] where the renderer draws its output.<br />
-		precision — shader precision. Can be *"highp"*, *"mediump"* or *"lowp"*.<br />
-		alpha — [page:Boolean], default is *false*.<br />
-		premultipliedAlpha — [page:Boolean], default is *true*.<br />
-		antialias — [page:Boolean], default is *false*.<br />
-		stencil — [page:Boolean], default is *true*.<br />
-		preserveDrawingBuffer — [page:Boolean], default is *false*.<br />
-		maxLights — [page:Integer], default is *4*.<br />
+		canvas 窶・A [page:Canvas] where the renderer draws its output.<br />
+		precision 窶・shader precision. Can be *"highp"*, *"mediump"* or *"lowp"*.<br />
+		alpha 窶・[page:Boolean], default is *false*.<br />
+		premultipliedAlpha 窶・[page:Boolean], default is *true*.<br />
+		antialias 窶・[page:Boolean], default is *false*.<br />
+		stencil 窶・[page:Boolean], default is *true*.<br />
+		preserveDrawingBuffer 窶・[page:Boolean], default is *false*.<br />
+		maxLights 窶・[page:Integer], default is *4*.<br />
 		</div>
 
 		<h2>Properties</h2>
@@ -227,15 +227,15 @@
 		<div>Initialises the preprocessing plugin, and adds it to the renderPluginsPre array.</div>
 
 		<h3>.updateShadowMap( [page:Scene scene], [page:Camera camera] )</h3>
-		<div>scene — an instance of [page:Scene]<br />
-		camera — an instance of [page:Camera]</div>
+		<div>scene 窶・an instance of [page:Scene]<br />
+		camera 窶・an instance of [page:Camera]</div>
 		<div>Tells the shadow map plugin to update using the passed scene and camera parameters.</div>
 
 
 		<h3>.renderBufferImmediate( [page:Object3D object], [page:shaderprogram program], [page:Material shading] )</h3>
-		<div>object — an instance of [page:Object3D]]<br />
-		program — an instance of shaderProgram<br />
-		shading — an instance of Material<br />
+		<div>object 窶・an instance of [page:Object3D]]<br />
+		program 窶・an instance of shaderProgram<br />
+		shading 窶・an instance of Material<br />
 		</div>
 		<div>
         Render an immediate buffer. Gets called by renderImmediateObject.
@@ -282,8 +282,8 @@
 
 		<h3>.setFaceCulling( cullFace, frontFace )</h3>
 		<div>
-		[page:String cullFace] —- "back", "front", "front_and_back", or false.<br />
-		[page:String frontFace] —- "ccw" or "cw<br />
+		[page:String cullFace] 窶・ "back", "front", "front_and_back", or false.<br />
+		[page:String frontFace] 窶・ "ccw" or "cw<br />
 		</div>
 		<div>Used for setting the gl frontFace, cullFace states in the GPU, thus enabling/disabling face culling when rendering.</div>
 		<div>If cullFace is false, culling will be disabled.</div>

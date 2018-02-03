@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import15-4.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 
 	<title>
-		�^�b�`�U�Ȃ�Ƃ�
+		タッチザなんとか
 	</title>
 </head>
 	
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�^�b�`�U�Ȃ�Ƃ�
+				タッチザなんとか
 			</div>
 		</div>
 		
@@ -34,17 +34,17 @@
 				<div id="inner-right">
 					<font size = "3">
 					<form name="box">
-						���F<input type="text" name="number" id="number" onKeyup="set();" size="3"><br>
-						�o�ߎ��ԁF<input type="text" name="time" id="time" size="6" style="background-color:#bbbbbb;"><br><br>
-						<input type="button" onClick="set();" value="��蒼��" id="init" name="init"><br><br>
+						個数：<input type="text" name="number" id="number" onKeyup="set();" size="3"><br>
+						経過時間：<input type="text" name="time" id="time" size="6" style="background-color:#bbbbbb;"><br><br>
+						<input type="button" onClick="set();" value="やり直す" id="init" name="init"><br><br>
 					</form>
-					�^�Q�[���̃p�N��<br>
-					0�������ƃ^�C�}�[���X�^�[�g���܂��B<br>
-					�����̏��������ɃN���b�N���Ă����ĉ������B<br><br>
+					某ゲームのパクリ<br>
+					0を押すとタイマーがスタートします。<br>
+					数字の小さい順にクリックしていって下さい。<br><br>
 
-					���͎��R�ɕς����܂��B<br>
-					200�Ƃ��ɂ��Ă��ĊO�l�܂Ȃ��B<br>
-					�����`�Ƀ����_���ɐ��񂳂���͖̂ʓ|�����Ȃ̂őË�
+					個数は自由に変えられます。<br>
+					200個とかにしても案外詰まない。<br>
+					正方形にランダムに整列させるのは面倒そうなので妥協
 					</font>
 				</div>
 			</div>

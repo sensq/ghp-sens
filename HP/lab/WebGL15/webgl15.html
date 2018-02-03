@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import15.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 
 	<title>
-		�}�E�X�C�x���g
+		マウスイベント
 	</title>
 </head>
 	
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�}�E�X�C�x���g
+				マウスイベント
 			</div>
 		</div>
 		
@@ -34,14 +34,14 @@
 				<div id="inner-right">
 					<font size = "3">
 					<form name="box">
-						�d���l�p�F<input type="checkbox" onclick="set();" name="off" id="off"><br><br>
+						重い人用：<input type="checkbox" onclick="set();" name="off" id="off"><br><br>
 					</form>
-					�I�u�W�F�N�g�Ƀ}�E�X�悹��Ɠ�����B<br>
-					�悹�ăN���b�N����Ə����܂��B<br>
-					�P�\5F���邩�炻��Ȃɓ���Ȃ��͂��B<br>
-					�S�������Ă��R�����g�o�邾���ł��B<br><br>
-					<button onclick="set();" id="set" name="set">��蒼��</button><br><br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">����݂����Ȃ���</a>
+					オブジェクトにマウス乗せると逃げる。<br>
+					乗せてクリックすると消えます。<br>
+					猶予5Fあるからそんなに難しくないはず。<br>
+					全部消してもコメント出るだけです。<br><br>
+					<button onclick="set();" id="set" name="set">やり直す</button><br><br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">解説みたいなもの</a>
 					</font>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -20,10 +20,10 @@
 
 		<h3>[name]( [page:Vector3 origin], [page:Vector3 direction], [page:Float near], [page:Float far] ) {</h3>
 		<div>
-		[page:Vector3 origin] — The origin vector where the ray casts from.<br />
-		[page:Vector3 direction] — The direction vector that  gives direction to the ray.<br />
-		[page:Float near] — All results returned are further away then near. Near can't be negative. Default value is 0.<br />
-		[page:Float far] — All results returned are closer then far. Far can't be lower then near . Default value is Infinity.
+		[page:Vector3 origin] 窶・The origin vector where the ray casts from.<br />
+		[page:Vector3 direction] 窶・The direction vector that  gives direction to the ray.<br />
+		[page:Float near] 窶・All results returned are further away then near. Near can't be negative. Default value is 0.<br />
+		[page:Float far] 窶・All results returned are closer then far. Far can't be lower then near . Default value is Infinity.
 		</div>
 		<div>
 		This creates a new raycaster object.<br />
@@ -58,8 +58,8 @@
 
 		<h3>.set( [page:Vector3 origin], [page:Vector3 direction] )</h3>
 		<div>
-		[page:Vector3 origin] — The origin vector where the ray casts from.<br />
-		[page:Vector3 direction] — The direction vector that  gives direction to the ray.
+		[page:Vector3 origin] 窶・The origin vector where the ray casts from.<br />
+		[page:Vector3 direction] 窶・The direction vector that  gives direction to the ray.
 		</div>
 		<div>
 		Updates the ray with a new origin and direction.
@@ -67,8 +67,8 @@
 
 		<h3>.intersectObject( [page:Object3D object], [page:Boolean recursive] )</h3>
 		<div>
-		[page:Object3D object] — The object to check for intersection with the ray.<br />
-		[page:Boolean recursive] — If set, it also checks all descendants. Otherwise it only checks intersecton with the object.
+		[page:Object3D object] 窶・The object to check for intersection with the ray.<br />
+		[page:Boolean recursive] 窶・If set, it also checks all descendants. Otherwise it only checks intersecton with the object.
 		</div>
 		<div>
 		checks all intersection between the ray and the object with or without the descendants. Intersections are returned sorted by distance, closest first.
@@ -79,8 +79,8 @@
 
 		<h3>.intersectObjects( [page:Array objects], [page:Boolean recursive] )</h3>
 		<div>
-		[page:Array objects] — The objects to check for intersection with the ray.<br />
-		[page:Boolean recursive] — If set, it also checks all descendants of the objects. Otherwise it only checks intersecton with the objects.
+		[page:Array objects] 窶・The objects to check for intersection with the ray.<br />
+		[page:Boolean recursive] 窶・If set, it also checks all descendants of the objects. Otherwise it only checks intersecton with the objects.
 		</div>
 		<div>
 		checks all intersection between the ray and the objects with or without the descendants. Intersections are returned sorted by distance, closest first.

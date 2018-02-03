@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div5.css">
 	<script src="./import5.js"></script>
 	<script>
@@ -17,8 +17,8 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				���z�n�̃��f��
-				<button onclick="Button_Content();" id="Button_Content">���ӏ���</button>
+				太陽系のモデル
+				<button onclick="Button_Content();" id="Button_Content">注意書き</button>
 			</div>
 			</div>
 		<div id="canvas">
@@ -26,22 +26,22 @@
 		<div id="center" style="display:none">
 			<div id="cont">
 				<ul>
-					<li>�߂�ǂ��������Ȃ̂ŉ~�O���ɂ��Ă܂��B��������<strong>�ȉ~�O��</strong>�ł��B
-					<li>�e�f���̃T�C�Y�A���z����̋����A���]�����A���]�����͒n������Ƃ��Ă����������m�Ȕ䗦�ɂ��Ă���܂��B<br>
-						�������A<strong>���z�̃T�C�Y�͓K��</strong>�ł��B���m�Ȕ䗦�ɂ���Ƃł����Ȃ肷����̂ŁB
-					<li>���]�̕������K�������ǁA�~�O���ɂȂ��Ă��邩���薳���͂��B
+					<li>めんどくさそうなので円軌道にしてます。正しくは<strong>楕円軌道</strong>です。
+					<li>各惑星のサイズ、太陽からの距離、公転周期、自転周期は地球を基としてだいたい正確な比率にしてあります。<br>
+						ただし、<strong>太陽のサイズは適当</strong>です。正確な比率にするとでかくなりすぎるので。
+					<li>自転の方向も適当だけど、円軌道になっているから問題無いはず。
 				</ul>
 			</div>
 		</div>
 		<div id="footer">
 			<div id="inner">
-				<button onclick="Button_Sun();" id="Button_Sun">���z�𒆐S�ɂ���</button>
-				<button onclick="Button_Mercury();" id="Button_Mercury">�����𒆐S�ɂ���</button>
-				<button onclick="Button_Venus();" id="Button_Venus">�����𒆐S�ɂ���</button>
-				<button onclick="Button_Earth();" id="Button_Earth">�n���𒆐S�ɂ���</button>
-				<button onclick="Button_Moon();" id="Button_Moon">���𒆐S�ɂ���</button>
-				<button onclick="Button_Mars();" id="Button_Mars">�ΐ��𒆐S�ɂ���</button>
-				<button onclick="Button_Jupiter();" id="Button_Jupiter">�ؐ��𒆐S�ɂ���</button>
+				<button onclick="Button_Sun();" id="Button_Sun">太陽を中心にする</button>
+				<button onclick="Button_Mercury();" id="Button_Mercury">水星を中心にする</button>
+				<button onclick="Button_Venus();" id="Button_Venus">金星を中心にする</button>
+				<button onclick="Button_Earth();" id="Button_Earth">地球を中心にする</button>
+				<button onclick="Button_Moon();" id="Button_Moon">月を中心にする</button>
+				<button onclick="Button_Mars();" id="Button_Mars">火星を中心にする</button>
+				<button onclick="Button_Jupiter();" id="Button_Jupiter">木星を中心にする</button>
 			</div>
 			</div>
 		</div>

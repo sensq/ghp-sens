@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import2.js"></script>
 	<script>
@@ -17,7 +17,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�{�^���̐ݒu
+				ボタンの設置
 			</div>
 		</div>
 			
@@ -29,40 +29,40 @@
 			
 			<div id="right">
 				<div id="inner-right1">
-					<label><input type="checkbox" onclick="Button_Startstop();" name="Button_Startstop" id="Button_Startstop">��]���~�߂�</label><br>
-					<button onclick="Button_Culling();" id="Button_Culling">������`�悷��</button><font size=2em>���e�B�[�|�b�g�ŉ����ƈӖ����킩��₷���B</font>
+					<label><input type="checkbox" onclick="Button_Startstop();" name="Button_Startstop" id="Button_Startstop">回転を止める</label><br>
+					<button onclick="Button_Culling();" id="Button_Culling">内側を描画する</button><font size=2em>※ティーポットで押すと意味がわかりやすい。</font>
 					<hr>
-					�����ƐF���ς��܂��B<br>
-					<label><input type="radio" onclick="Button_Color1();" name="Button_Color" checked="checked">�f�t�H���g</label><br>
-					<label><input type="radio" onclick="Button_Color2();" name="Button_Color">���b�h</label>
-					<label><input type="radio" onclick="Button_Color3();" name="Button_Color">�O���[��</label><br>
-					<label><input type="radio" onclick="Button_Color4();" name="Button_Color">�u���[</label>
-					<label><input type="radio" onclick="Button_Color5();" name="Button_Color">�C�G���[</label><br>
-					<label><input type="radio" onclick="Button_Color6();" name="Button_Color">�}�[���^</label>
-					<label><input type="radio" onclick="Button_Color7();" name="Button_Color">�V�A��</label>
+					押すと色が変わります。<br>
+					<label><input type="radio" onclick="Button_Color1();" name="Button_Color" checked="checked">デフォルト</label><br>
+					<label><input type="radio" onclick="Button_Color2();" name="Button_Color">レッド</label>
+					<label><input type="radio" onclick="Button_Color3();" name="Button_Color">グリーン</label><br>
+					<label><input type="radio" onclick="Button_Color4();" name="Button_Color">ブルー</label>
+					<label><input type="radio" onclick="Button_Color5();" name="Button_Color">イエロー</label><br>
+					<label><input type="radio" onclick="Button_Color6();" name="Button_Color">マゼンタ</label>
+					<label><input type="radio" onclick="Button_Color7();" name="Button_Color">シアン</label>
 					<hr>
-					�`�󂪕ς��܂��B<br>
+					形状が変わります。<br>
 					<select>
-					<option onclick="Button_Shape1();" name="Button_Shape" id="Button_Shape1">�g�[���X
-					<option onclick="Button_Shape2();" name="Button_Shape" id="Button_Shape2">����
-					<option onclick="Button_Shape3();" name="Button_Shape" id="Button_Shape3">������
-					<option onclick="Button_Shape4();" name="Button_Shape" id="Button_Shape4">�e�B�[�|�b�g
-					<option onclick="Button_Shape5();" name="Button_Shape" id="Button_Shape5">�g�[���X���і�(3,7)�^
+					<option onclick="Button_Shape1();" name="Button_Shape" id="Button_Shape1">トーラス
+					<option onclick="Button_Shape2();" name="Button_Shape" id="Button_Shape2">球体
+					<option onclick="Button_Shape3();" name="Button_Shape" id="Button_Shape3">立方体
+					<option onclick="Button_Shape4();" name="Button_Shape" id="Button_Shape4">ティーポット
+					<option onclick="Button_Shape5();" name="Button_Shape" id="Button_Shape5">トーラス結び目(3,7)型
 					</select>
 					<br>
-					<a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%BC%E3%83%A9%E3%82%B9%E7%B5%90%E3%81%B3%E7%9B%AE" target="blank">Wikipedia:�g�[���X���і�</a>
+					<a href="http://ja.wikipedia.org/wiki/%E3%83%88%E3%83%BC%E3%83%A9%E3%82%B9%E7%B5%90%E3%81%B3%E7%9B%AE" target="blank">Wikipedia:トーラス結び目</a>
 				</div>
 				<div id="inner-right2" style="display:none;">
-					<strong>�������e</strong>
+					<strong>実装内容</strong>
 					<ul>
-		  				<li>�}�E�X�ŉ�]�A�z�C�[���Ŋg��k��
-		  				<li>�����ŉ�]
-		  				<li>FPS�̕\��
-		  				<li>�{�^���ɂ��F�ƌ`��̐؂�ւ�
-		  				<li>������]��STOP/START
-		  				<li>Depth�̐؂�ւ�
-		  				<li>Depth��؂�ւ����Ƃ��Ɉꏏ��Culling���؂�ւ���
-		  				<li>�J���[�ƌ`��őI���̎d���Ⴄ�̂͂킴�Ƃł�
+		  				<li>マウスで回転、ホイールで拡大縮小
+		  				<li>自動で回転
+		  				<li>FPSの表示
+		  				<li>ボタンによる色と形状の切り替え
+		  				<li>自動回転のSTOP/START
+		  				<li>Depthの切り替え
+		  				<li>Depthを切り替えたときに一緒にCullingも切り替える
+		  				<li>カラーと形状で選択の仕方違うのはわざとです
 		  			</ul>
 				</div>
 			</div>
@@ -70,7 +70,7 @@
 		
 		<div id="footer">
 			<div id="inner">
-				<button onclick="Button_Content();" id="Button_Content">�������e��\��</button>
+				<button onclick="Button_Content();" id="Button_Content">実装内容を表示</button>
 			</div>
 		</div>
 	</div>

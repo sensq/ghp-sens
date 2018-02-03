@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div7-3.css">
 	<script src="./import7-3.js"></script>
 	<script>
@@ -9,7 +9,7 @@
 	</script>
 
 	<title>
-		���H���ǂ�
+		迷路もどき
 	</title>
 </head>
 
@@ -17,8 +17,8 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				���H���ǂ�
-				<button onclick="Button_Content();" id="Button_Content">�Z�p�I�Ȃ���</button>
+				迷路もどき
+				<button onclick="Button_Content();" id="Button_Content">技術的なこと</button>
 			</div>
 		</div>
 			
@@ -30,16 +30,16 @@
 			
 			<div id="right">
 				<div id="inner-right1">
-					�J�[�\���ňړ�<br>
-					�Ӗ���������z,x�ŏc�ɐL�т�B<br>
-					�J�����̉�]��g��k���͊����ĕt���Ă���܂��B<br>
-					<b>�S�[�����Ă������N����܂���B</b>
+					カーソルで移動<br>
+					意味無いけどz,xで縦に伸びる。<br>
+					カメラの回転や拡大縮小は敢えて付けてあります。<br>
+					<b>ゴールしても何も起こりません。</b>
 				</div>
 				<div id="inner-right2" style="display:none">
-					��{�I��<a href="../WebGL7-2/webgl7-2.html">�Փ˔���</a>�̗��p<br>
-					�񎟌��z��Ŋe�}�X���Ƀt���O��t���āA�ړ��悪�ړ��\���ǂ����ŏՓ˂𔻒肵�Ă�B<br>
-					�ʂɋÂ������̍�����͂Ȃ������̂ō\���͓K��������ǁA�e�N�X�`���t���ăJ�����𕨑̂ɒǏ]����悤�ɂ�����Ȃ񂩗ǂ������ɂȂ����B�J�������[�N�厖<br>
-					�T�C�Y�傫�����č\���Â�����A�J�����߂Â��Ď��싷�߂���A�Փ˔����z���ɂ��t����3�����ɂ�����A���Ԃ�������ΐF�X�Ɠ�Փx�������܂��B
+					基本的に<a href="../WebGL7-2/webgl7-2.html">衝突判定</a>の流用<br>
+					二次元配列で各マス一つ一つにフラグを付けて、移動先が移動可能かどうかで衝突を判定してる。<br>
+					別に凝ったもの作るつもりはなかったので構造は適当だけれど、テクスチャ付けてカメラを物体に追従するようにしたらなんか良い感じになった。カメラワーク大事<br>
+					サイズ大きくして構造凝ったり、カメラ近づけて視野狭めたり、衝突判定をz軸にも付けて3次元にしたり、時間をかければ色々と難易度あげられます。
 				</div>
 			</div>
 		</div>

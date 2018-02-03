@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl22.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		3D�_���W�������ǂ�
+		3Dダンジョンもどき
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				3D�_���W�������ǂ�
+				3Dダンジョンもどき
 			</div>
 		</div>
 		
@@ -38,28 +38,28 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					�y��������z<br>
-					W�őO�i�AS�Ō�ށAA�ō���]�AD�ŉE��]<br>
-					Q�ō��X���C�h�AE�ŉE�X���C�h<br>
-					Z�L�[�Ńt���X�N���[����
+					【操作説明】<br>
+					Wで前進、Sで後退、Aで左回転、Dで右回転<br>
+					Qで左スライド、Eで右スライド<br>
+					Zキーでフルスクリーン化
 					<hr>
-					�y�I�v�V�����z<br>
-					<input type="button" onclick="updateObject.random();" name="random" value="�ǃ����_���z�u"><br>
-					�����������߂��Ⴍ����ɂȂ�܂��B
+					【オプション】<br>
+					<input type="button" onclick="updateObject.random();" name="random" value="壁ランダム配置"><br>
+					※だいたいめちゃくちゃになります。
 					<hr>
-					�y����z<br>
-					Wiz�␢�E���̖��{�݂�����3D�_���W�����̃C���[�W�B<br>
-					�e�N�X�`����ǂݍ��ނ̂Ɏ኱���Ԃ�������܂��B<br>
-					�������]����ƏՓ˂̔��肪���������Ȃ�܂��B�i�����Ȃ������j<br>
-					�S�[�����Ă��^�C�����\������邾���ł��B<br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/10/18/433/">�R�[�h�̉��</a>
+					【解説】<br>
+					Wizや世界樹の迷宮みたいな3Dダンジョンのイメージ。<br>
+					テクスチャを読み込むのに若干時間がかかります。<br>
+					何回も回転すると衝突の判定がおかしくなります。（直せなかった）<br>
+					ゴールしてもタイムが表示されるだけです。<br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/10/18/433/">コードの解説</a>
 				</div>
 			</div>
 		</div>
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">�g�b�v�ɖ߂�</font></a>
+			<a href="../top2.html"><font size="4">トップに戻る</font></a>
 			</div>
 		</div>
 	</div>

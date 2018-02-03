@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div6.css">
 	<script src="./import6.js"></script>
 	<script>
@@ -9,7 +9,7 @@
 	</script>
 
 	<title>
-		���ʑ�
+		多面体
 	</title>
 </head>
 
@@ -17,8 +17,8 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				���ʑ�
-				<button onclick="Button_Content();" id="Button_Content">�Z�p�I�Ȃ���</button>
+				多面体
+				<button onclick="Button_Content();" id="Button_Content">技術的なこと</button>
 			</div>
 		</div>
 			
@@ -30,20 +30,20 @@
 			
 			<div id="right">
 				<div id="inner-right1">
-					<strong>������]�ƃ��C�g��ON/OFF</strong><br>
-					<label><input type="checkbox" onclick="Button_Rotx();" name="checkb" id="Button_Rotx">X��</label>
-					<label><input type="checkbox" onclick="Button_Roty();" name="checkb" id="Button_Roty">Y��</label>
-					<label><input type="checkbox" onclick="Button_Rotz();" name="checkb" id="Button_Rotz">Z��</label><br>
-					<label><input type="checkbox" onclick="Button_dLight();" name="checkb" id="Button_dLight">���s���C�g</label>
-					<label><input type="checkbox" onclick="Button_hLight();" name="checkb" id="Button_hLight">�������C�g</label><br>
-					��������]��ON�ɂȂ��Ă�������́��ő���ł��܂���B
+					<strong>自動回転とライトのON/OFF</strong><br>
+					<label><input type="checkbox" onclick="Button_Rotx();" name="checkb" id="Button_Rotx">X軸</label>
+					<label><input type="checkbox" onclick="Button_Roty();" name="checkb" id="Button_Roty">Y軸</label>
+					<label><input type="checkbox" onclick="Button_Rotz();" name="checkb" id="Button_Rotz">Z軸</label><br>
+					<label><input type="checkbox" onclick="Button_dLight();" name="checkb" id="Button_dLight">平行ライト</label>
+					<label><input type="checkbox" onclick="Button_hLight();" name="checkb" id="Button_hLight">半球ライト</label><br>
+					※自動回転がONになっている方向は↓で操作できません。
 					<hr>
 				</div>
 				<div id="inner-right3">
 				</div>
 				<div id="inner-right2" style="display:none;">
-					<a href="http://mitani.cs.tsukuba.ac.jp/polyhedron/index.html">������</a>����DL����obj�f�[�^��blender�œǂݍ��݁ATHREE.js�p�ɃG�N�X�|�[�g���ĕ`��<br>
-					obj�𒼐�THREE.js�œǂݍ��߂�炵�����ǂȂ񂩏�肭�����Ȃ��B
+					<a href="http://mitani.cs.tsukuba.ac.jp/polyhedron/index.html">こちら</a>からDLしたobjデータをblenderで読み込み、THREE.js用にエクスポートして描画<br>
+					objを直接THREE.jsで読み込めるらしいけどなんか上手くいかない。
 				</div>
 			</div>
 		</div>

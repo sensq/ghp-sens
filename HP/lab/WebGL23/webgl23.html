@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl23.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		�V���[�e�B���O���ǂ�
+		シューティングもどき
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�V���[�e�B���O���ǂ�
+				シューティングもどき
 			</div>
 		</div>
 		
@@ -38,38 +38,38 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					�y�T�v�z<br>
-					�Ԃ��L���[�u��30�b�ȓ��ɂł��邾�������|���N�\�Q�[<br>
-					���܂ɏo�鉩�F���̂�3�_<br>
-					FPS�������قǗL���Ȃ̂ł��܂�X�R�A�ɈӖ��͖����ł��B<br>
+					【概要】<br>
+					赤いキューブを30秒以内にできるだけ多く倒すクソゲー<br>
+					たまに出る黄色いのは3点<br>
+					FPSが高いほど有利なのであまりスコアに意味は無いです。<br>
 					<hr>
-					�y��������z<br>
-					���E�L�[�ňړ��A�X�y�[�X�L�[�Ń~�T�C���̂悤�Ȃ��̔���<br>
-					Z�L�[�Ńt���X�N���[����<br>
-					���X�y�[�X�L�[�������ƃ^�C�}�[�������o���܂��B
+					【操作説明】<br>
+					左右キーで移動、スペースキーでミサイルのようなもの発射<br>
+					Zキーでフルスクリーン化<br>
+					一回スペースキーを押すとタイマーが動き出します。
 					<hr>
-					Now Frame�F<input type="text" id="time" value="0" size="4"><br>
-					Now Score�F<input type="text" id="score" value="0" size="4"><br>
-					Red�F<input type="text" id="red" value="0" size="2">�@Yellow�F<input type="text" id="yellow" value="0" size="2"> Record�F<input type="text" id="record" value="0" size="3">
+					Now Frame：<input type="text" id="time" value="0" size="4"><br>
+					Now Score：<input type="text" id="score" value="0" size="4"><br>
+					Red：<input type="text" id="red" value="0" size="2">　Yellow：<input type="text" id="yellow" value="0" size="2"> Record：<input type="text" id="record" value="0" size="3">
 					<hr>
-					�y����z<br>
-					Tween.js��Three.js�ŃQ�[����ꂻ���������������Ă݂��B<br>
-					20[FPS]����20�_�A60[FPS]����30�_�������琦���B�����������ǁB<br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/11/18/536/">�ڂ������</a>
+					【解説】<br>
+					Tween.jsとThree.jsでゲーム作れそうだったから作ってみた。<br>
+					20[FPS]だと20点、60[FPS]だと30点超えたら凄い。何も無いけど。<br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/11/18/536/">詳しい解説</a>
 					<hr>
-					<label>��l�̎��_�F<input type="radio" id="1st" name="camera"></label><br>
-					<label>�O�l�̎��_�F<input type="radio" id="3rd" name="camera"  checked="checked"></label><br>
-					<label>���Վ��_�F<input type="radio" id="hukan" name="camera"></label>
+					<label>一人称視点：<input type="radio" id="1st" name="camera"></label><br>
+					<label>三人称視点：<input type="radio" id="3rd" name="camera"  checked="checked"></label><br>
+					<label>俯瞰視点：<input type="radio" id="hukan" name="camera"></label>
 					<hr>
-					<label>�I���ȃ`�[�g�F<input type="checkbox" id="rush"></label><br>
-					�����X�ɏd���Ȃ�܂��B
+					<label>露骨なチート：<input type="checkbox" id="rush"></label><br>
+					※徐々に重くなります。
 				</div>
 			</div>
 		</div>
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">�g�b�v�ɖ߂�</font></a>
+			<a href="../top2.html"><font size="4">トップに戻る</font></a>
 			</div>
 		</div>
 	</div>

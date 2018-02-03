@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="../util/myTemplate.js"></script>
 	<script src="./webgl5.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -21,7 +21,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		���z�n�̃��f��
+		太陽系のモデル
 	</title>
 </head>
 
@@ -29,7 +29,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				���z�n�̃��f��
+				太陽系のモデル
 			</div>
 		</div>
 	<div id="center">
@@ -37,22 +37,22 @@
 		</div>
 		<div id="right">
 			<div id="inner-right">
-				�E�߂�ǂ��������Ȃ̂ŉ~�O���ɂ��Ă܂��B��������<strong>�ȉ~�O��</strong>�ł��B<br>
-				�E�e�f���̃T�C�Y�A���z����̋����A���]�����A���]�����͒n������Ƃ��Ă����������m�Ȕ䗦�ɂ��Ă���܂��B<br>
-				�E�������A���z�̃T�C�Y�����͐��m�Ȕ䗦�ɂ���Ƃł����Ȃ肷����̂œK���ł��B<br>
-				�E���]�̕������K�������ǁA�~�O���ɂȂ��Ă��邩���薳���͂��B
+				・めんどくさそうなので円軌道にしてます。正しくは<strong>楕円軌道</strong>です。<br>
+				・各惑星のサイズ、太陽からの距離、公転周期、自転周期は地球を基としてだいたい正確な比率にしてあります。<br>
+				・ただし、太陽のサイズだけは正確な比率にするとでかくなりすぎるので適当です。<br>
+				・自転の方向も適当だけど、円軌道になっているから問題無いはず。
 			</div>
 		</div>
 	</div>
 	<div id="footer">
 		<div id="inner">
-			<button onclick="cameraTarget(mesh_Sun);" id="targetSun">���z�𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Mercury);" id="targetMercury">�����𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Venus);" id="targetVenus">�����𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Earth);" id="targetEarth">�n���𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Moon);" id="targetMoon">���𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Mars);" id="targetMars">�ΐ��𒆐S�ɂ���</button>
-			<button onclick="cameraTarget(mesh_Jupiter);" id="targetJupiter">�ؐ��𒆐S�ɂ���</button>
+			<button onclick="cameraTarget(mesh_Sun);" id="targetSun">太陽を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mercury);" id="targetMercury">水星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Venus);" id="targetVenus">金星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Earth);" id="targetEarth">地球を中心にする</button>
+			<button onclick="cameraTarget(mesh_Moon);" id="targetMoon">月を中心にする</button>
+			<button onclick="cameraTarget(mesh_Mars);" id="targetMars">火星を中心にする</button>
+			<button onclick="cameraTarget(mesh_Jupiter);" id="targetJupiter">木星を中心にする</button>
 		</div>
 	</div>
 </div>

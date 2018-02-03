@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl16.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		�l�ߍ��킹���e
+		詰め合わせ第二弾
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�l�ߍ��킹���e
+				詰め合わせ第二弾
 			</div>
 		</div>
 		
@@ -39,24 +39,24 @@
 			<div id="right">
 				<div id="inner-right">
 					<form name="box">
-						<label>�������F<input type="checkbox" name="light_vis" id="light_vis" onChange="updateObject.visibleLight();"></label><br>
-						�i�V���h�[�}�b�s���OOFF���Ɩ����j<br>
-						<label>�e�N�X�`���ݒ�F<input type="checkbox" name="onTexture" id="onTexture" onChange="updateObject.map();"></label><br>
-						<label>�V���h�[�}�b�s���O�F<input type="checkbox" name="onShadow" id="onShadow" onChange="updateScene();"></label><br>
-						<label>�o���v�}�b�s���O�F<input type="checkbox" name="onBump" id="onBump" onChange="updateObject.bump();"></label><br>
-						<label>���}�b�s���O�F<input type="checkbox" name="onEnv" id="onEnv" onChange="updateObject.env();"></label><br>
-						<label>�X�J�C�{�b�N�X�`��F<input type="checkbox" name="onSkyform" id="onSkyform" onChange="updateObject.skyform();">�iON�Ŕ�, OFF�ŋ��j</label><br>
-						<label>�X�J�C�{�b�N�X�e�N�X�`���F<input type="checkbox" name="onSky" id="onSky" onChange="updateObject.sky();"></label><br>
-						<label>�L���[�u���߁F<input type="checkbox" name="Blending" id="Blending" onChange="updateObject.blend();"></label><br>
-						<label>�������F<input type="checkbox" name="removeFloor" id="removeFloor" onChange="updateObject.removefloor();"></label><br>
+						<label>光可視化：<input type="checkbox" name="light_vis" id="light_vis" onChange="updateObject.visibleLight();"></label><br>
+						（シャドーマッピングOFFだと無効）<br>
+						<label>テクスチャ設定：<input type="checkbox" name="onTexture" id="onTexture" onChange="updateObject.map();"></label><br>
+						<label>シャドーマッピング：<input type="checkbox" name="onShadow" id="onShadow" onChange="updateScene();"></label><br>
+						<label>バンプマッピング：<input type="checkbox" name="onBump" id="onBump" onChange="updateObject.bump();"></label><br>
+						<label>環境マッピング：<input type="checkbox" name="onEnv" id="onEnv" onChange="updateObject.env();"></label><br>
+						<label>スカイボックス形状：<input type="checkbox" name="onSkyform" id="onSkyform" onChange="updateObject.skyform();">（ONで箱, OFFで球）</label><br>
+						<label>スカイボックステクスチャ：<input type="checkbox" name="onSky" id="onSky" onChange="updateObject.sky();"></label><br>
+						<label>キューブ透過：<input type="checkbox" name="Blending" id="Blending" onChange="updateObject.blend();"></label><br>
+						<label>床消去：<input type="checkbox" name="removeFloor" id="removeFloor" onChange="updateObject.removefloor();"></label><br>
 						<br>
-						�L�[�{�[�h�Fp�Ńp�[�e�B�N���΂�T��, z�Ńt���X�N���[�����B<br>
-						�}�E�X�F�L���[�u�Ƌ��̓I���}�E�X�Ō���B �L���[�u�͊e�ʃN���b�N�ňړ��B<br>
-						���͉�����Q��<br>
+						キーボード：pでパーティクルばら撒き, zでフルスクリーン化。<br>
+						マウス：キューブと球はオンマウスで光る。 キューブは各面クリックで移動。<br>
+						他は解説を参照<br>
 						<br>
 					</form>
 					<div id="dat"></div>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/08/17/245/" target="_blank">����݂����Ȃ���</a>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/08/17/245/" target="_blank">解説みたいなもの</a>
 
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">�g�b�v�ɖ߂�</font></a>
+			<a href="../top2.html"><font size="4">トップに戻る</font></a>
 			</div>
 		</div>
 	</div>

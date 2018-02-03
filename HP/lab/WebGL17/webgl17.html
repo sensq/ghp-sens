@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl17.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL‘Î‰žƒuƒ‰ƒEƒU‚ÅŒ©‚Ä‰º‚³‚¢B\nFirefox‚ÆChrome‚Å‚Ì‚Ý“®ìŠm”F‚µ‚Ä‚Ü‚·B");
+		alert("WebGLå¯¾å¿œãƒ–ãƒ©ã‚¦ã‚¶ã§è¦‹ã¦ä¸‹ã•ã„ã€‚\nFirefoxã¨Chromeã§ã®ã¿å‹•ä½œç¢ºèªã—ã¦ã¾ã™ã€‚");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		ƒp[ƒeƒBƒNƒ‹EƒVƒXƒeƒ€
+		ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ãƒ»ã‚·ã‚¹ãƒ†ãƒ 
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				ƒp[ƒeƒBƒNƒ‹EƒVƒXƒeƒ€
+				ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ãƒ»ã‚·ã‚¹ãƒ†ãƒ 
 			</div>
 		</div>
 		
@@ -38,49 +38,49 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					‰æ‘œ“Ç‚Ýž‚Ý<br>
+					ç”»åƒèª­ã¿è¾¼ã¿<br>
 					<input type="file" id="loadImg" onchange="loadImg()">
-					<button onclick="loadImg()" id="loadImg_Button">“Ç‚Ýž‚Ý</button>
+					<button onclick="loadImg()" id="loadImg_Button">èª­ã¿è¾¼ã¿</button>
 					<br>
 					<form name="box">
-						<input type="number" size="8" name="numParticles" id="numParticles" min="0" step="50" placeholder="2000" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">FŒÂ”
+						<input type="number" size="8" name="numParticles" id="numParticles" min="0" step="50" placeholder="2000" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">ï¼šå€‹æ•°
 						<br>
-						<input type="number" size="8" name="radius" id="radius" min="1" step="1" placeholder="200" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">F”¼Œa
+						<input type="number" size="8" name="radius" id="radius" min="1" step="1" placeholder="200" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">ï¼šåŠå¾„
 						<br>
-						<input type="number" size="8" name="size" id="size" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">Fƒp[ƒeƒBƒNƒ‹ƒTƒCƒY
+						<input type="number" size="8" name="size" id="size" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">ï¼šãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚µã‚¤ã‚º
 						<br>
-						<label><input type="checkbox" onclick="updateObject.rotate();" name="rotate" id="rotate" checked="checked">‰ñ“]</label>
+						<label><input type="checkbox" onclick="updateObject.rotate();" name="rotate" id="rotate" checked="checked">å›žè»¢</label>
 						<br>
-						<label><input type="checkbox" onclick="updateObject.Particles();" name="Rcolor" id="Rcolor" checked="checked">ƒ‰ƒ“ƒ_ƒ€ƒJƒ‰[</label>
+						<label><input type="checkbox" onclick="updateObject.Particles();" name="Rcolor" id="Rcolor" checked="checked">ãƒ©ãƒ³ãƒ€ãƒ ã‚«ãƒ©ãƒ¼</label>
 						<br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="cube">—§•û‘Ì</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="cube">ç«‹æ–¹ä½“</label>
 						<br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="circle_bad">‰~iBadj</label>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="circle_good">‰~iGoodj</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="circle_bad">å††ï¼ˆBadï¼‰</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="circle_good">å††ï¼ˆGoodï¼‰</label>
 						<br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="surf_bad">‹…•\–ÊiBadj</label>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="surf_good">‹…•\–ÊiGoodj</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="surf_bad">çƒè¡¨é¢ï¼ˆBadï¼‰</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="surf_good">çƒè¡¨é¢ï¼ˆGoodï¼‰</label>
 						<br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="sphere_bad">‹…iBadj</label>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="sphere_good">‹…iGoodj</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="sphere_bad">çƒï¼ˆBadï¼‰</label>
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="sphere_good">çƒï¼ˆGoodï¼‰</label>
 						<br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="Lissajous" checked="checked">ƒŠƒT[ƒWƒ…‹Èü</label><br>
-						Žü”g”F<input type="number" size="5" name="fr1" id="fr1" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="Lissajous" checked="checked">ãƒªã‚µãƒ¼ã‚¸ãƒ¥æ›²ç·š</label><br>
+						å‘¨æ³¢æ•°ï¼š<input type="number" size="5" name="fr1" id="fr1" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="number" size="5" name="fr2" id="fr2" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="number" size="5" name="fr3" id="fr3" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();"><br>
-						ˆÊ‘Š·F<input type="text" size="5" name="ph1" id="ph1" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
+						ä½ç›¸å·®ï¼š<input type="text" size="5" name="ph1" id="ph1" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="text" size="5" name="ph2" id="ph2" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="text" size="5" name="ph3" id="ph3" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();"><br>
-						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="3DLissajous">‹…–ÊƒŠƒT[ƒWƒ…</label><br>
-						Žü”g”F<input type="number" size="5" name="fr_p" id="fr_p" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
+						<label><input type="radio" onclick="updateObject.Particles();" name="shape" id="3DLissajous">çƒé¢ãƒªã‚µãƒ¼ã‚¸ãƒ¥</label><br>
+						å‘¨æ³¢æ•°ï¼š<input type="number" size="5" name="fr_p" id="fr_p" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="number" size="5" name="fr_q" id="fr_q" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<input type="number" size="5" name="fr_r" id="fr_r" min="1" step="1" placeholder="10" onChange="updateObject.Particles();" onkeyup="updateObject.Particles();">
 						<br><br>
-						zƒL[‚Åƒtƒ‹ƒXƒNƒŠ[ƒ“‰»B<br>
+						zã‚­ãƒ¼ã§ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³åŒ–ã€‚<br>
 						<br>
 					</form>
 					<div id="dat"></div>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/09/15/307/" target="_blank">‰ðà‚Ý‚½‚¢‚È‚à‚Ì</a>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/09/15/307/" target="_blank">è§£èª¬ã¿ãŸã„ãªã‚‚ã®</a>
 
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">ƒgƒbƒv‚É–ß‚é</font></a>
+			<a href="../top2.html"><font size="4">ãƒˆãƒƒãƒ—ã«æˆ»ã‚‹</font></a>
 			</div>
 		</div>
 	</div>

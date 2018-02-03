@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./webgl20.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL‘Î‰žƒuƒ‰ƒEƒU‚ÅŒ©‚Ä‰º‚³‚¢B\nFirefox‚ÆChrome‚Å‚Ì‚Ý“®ìŠm”F‚µ‚Ä‚Ü‚·B");
+		alert("WebGLå¯¾å¿œãƒ–ãƒ©ã‚¦ã‚¶ã§è¦‹ã¦ä¸‹ã•ã„ã€‚\nFirefoxã¨Chromeã§ã®ã¿å‹•ä½œç¢ºèªã—ã¦ã¾ã™ã€‚");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		ƒZƒOƒƒ“ƒe[ƒVƒ‡ƒ“
+		ã‚»ã‚°ãƒ¡ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				ƒZƒOƒƒ“ƒe[ƒVƒ‡ƒ“
+				ã‚»ã‚°ãƒ¡ãƒ³ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
 			</div>
 		</div>
 		
@@ -38,48 +38,48 @@
 			
 			<div id="right">
 				<div id="inner-right">
-					y‘€ìà–¾z<br>
-					¶ƒNƒŠƒbƒN‚ÅƒNƒŠƒbƒN‚µ‚½•”•ª‚ÌF‚ª•Ï‚í‚éB<br>
-					‰EƒNƒŠƒbƒN‚ÅƒNƒŠƒbƒN‚µ‚½ƒIƒuƒWƒFƒNƒg‚ðƒJƒƒ‰‚Ìƒ^[ƒQƒbƒg‚É‚·‚éB<br>
-					zƒL[‚Åƒtƒ‹ƒXƒNƒŠ[ƒ“‰»
+					ã€æ“ä½œèª¬æ˜Žã€‘<br>
+					å·¦ã‚¯ãƒªãƒƒã‚¯ã§ã‚¯ãƒªãƒƒã‚¯ã—ãŸéƒ¨åˆ†ã®è‰²ãŒå¤‰ã‚ã‚‹ã€‚<br>
+					å³ã‚¯ãƒªãƒƒã‚¯ã§ã‚¯ãƒªãƒƒã‚¯ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ã‚«ãƒ¡ãƒ©ã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã«ã™ã‚‹ã€‚<br>
+					zã‚­ãƒ¼ã§ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³åŒ–
 					<hr>
-					yƒIƒvƒVƒ‡ƒ“z<br>
-					<input type="button" onClick="updateScene();" id="init" value="Œ³‚É–ß‚·"><br>
+					ã€ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã€‘<br>
+					<input type="button" onClick="updateScene();" id="init" value="å…ƒã«æˆ»ã™"><br>
 						<br>
-					ŠeŽíƒIƒuƒWƒFƒNƒg‚ð’†‰›‚É‚·‚éB<br>
+					å„ç¨®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä¸­å¤®ã«ã™ã‚‹ã€‚<br>
 					<select name="cameraTarget" id="cameraTarget" onchange="cameraTarget()">
-						<option>•½–Ê</option>
-						<option>ƒLƒ…[ƒu</option>
-						<option>ƒXƒtƒBƒA</option>
+						<option>å¹³é¢</option>
+						<option>ã‚­ãƒ¥ãƒ¼ãƒ–</option>
+						<option>ã‚¹ãƒ•ã‚£ã‚¢</option>
 					</select>
-					<input type="button" onClick="updateObject.cameraTarget();" id="blackButton" value="ŽÀs"><br>
-					‘S–Ê‚ð•‚­‚·‚éB<br>
+					<input type="button" onClick="updateObject.cameraTarget();" id="blackButton" value="å®Ÿè¡Œ"><br>
+					å…¨é¢ã‚’é»’ãã™ã‚‹ã€‚<br>
 					<select name="black" id="black" onchange="updateObject.black()">
-						<option>•½–Ê</option>
-						<option>ƒLƒ…[ƒu</option>
-						<option>ƒXƒtƒBƒA</option>
+						<option>å¹³é¢</option>
+						<option>ã‚­ãƒ¥ãƒ¼ãƒ–</option>
+						<option>ã‚¹ãƒ•ã‚£ã‚¢</option>
 					</select>
-					<input type="button" onClick="updateObject.black();" id="blackButton" value="ŽÀs"><br>
-					ƒ‰ƒ“ƒ_ƒ€‚ÅF‚ð•Ï‚¦‚éB<br>
+					<input type="button" onClick="updateObject.black();" id="blackButton" value="å®Ÿè¡Œ"><br>
+					ãƒ©ãƒ³ãƒ€ãƒ ã§è‰²ã‚’å¤‰ãˆã‚‹ã€‚<br>
 					<select name="random" id="random" onchange="updateObject.random()">
-						<option>•½–Ê</option>
-						<option>ƒLƒ…[ƒu</option>
-						<option>ƒXƒtƒBƒA</option>
+						<option>å¹³é¢</option>
+						<option>ã‚­ãƒ¥ãƒ¼ãƒ–</option>
+						<option>ã‚¹ãƒ•ã‚£ã‚¢</option>
 					</select>
-					<input type="button" onClick="updateObject.random();" id="blackButton" value="ŽÀs">
-					<label>ŽOŠpŒ`‚É•ª‚¯‚éF<input type="checkbox" id="tri"></label><br>
-					ƒNƒŠƒbƒNŽž‚ÌF<br>
+					<input type="button" onClick="updateObject.random();" id="blackButton" value="å®Ÿè¡Œ">
+					<label>ä¸‰è§’å½¢ã«åˆ†ã‘ã‚‹ï¼š<input type="checkbox" id="tri"></label><br>
+					ã‚¯ãƒªãƒƒã‚¯æ™‚ã®è‰²<br>
 					<div id="datgui"></div>
 					<input type="text" id="clickColor" value="0xff0000" hidden><br>
 					<hr>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/10/13/415/" target="_blank">‰ðà‚Ý‚½‚¢‚È‚à‚Ì</a>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/10/13/415/" target="_blank">è§£èª¬ã¿ãŸã„ãªã‚‚ã®</a>
 				</div>
 			</div>
 		</div>
 		
 		<div id="footer">
 			<div id="inner">
-			<a href="../top2.html"><font size="4">ƒgƒbƒv‚É–ß‚é</font></a>
+			<a href="../top2.html"><font size="4">ãƒˆãƒƒãƒ—ã«æˆ»ã‚‹</font></a>
 			</div>
 		</div>
 	</div>

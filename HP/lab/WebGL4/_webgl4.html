@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="_div4.css">
 	<script src="./_import4.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL‘Î‰žƒuƒ‰ƒEƒU‚ÅŒ©‚Ä‰º‚³‚¢B\nFirefox‚ÆChrome‚Å‚Ì‚Ý“®ìŠm”F‚µ‚Ä‚Ü‚·B");
+		alert("WebGLå¯¾å¿œãƒ–ãƒ©ã‚¦ã‚¶ã§è¦‹ã¦ä¸‹ã•ã„ã€‚\nFirefoxã¨Chromeã§ã®ã¿å‹•ä½œç¢ºèªã—ã¦ã¾ã™ã€‚");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
@@ -21,7 +21,7 @@
 		<div id="header">
 			<div id="inner">
 				Model Changer
-				<button onclick="Button_Startstop();" id="Button_Startstop">‰ñ“]‚ðŽ~‚ß‚é/“®‚©‚·</button>
+				<button onclick="Button_Startstop();" id="Button_Startstop">å›žè»¢ã‚’æ­¢ã‚ã‚‹/å‹•ã‹ã™</button>
 			</div>
 		</div>
 		<div id="center">
@@ -31,21 +31,21 @@
 			</div>
 			<div id="right">
 				<div id="LeftMenu">
-					ƒeƒNƒXƒ`ƒƒØ‚è‘Ö‚¦<br>
-					<label><input type="radio" onclick="Button_Texture(1);" name="Button_Texture">ƒJƒ‰[ƒ}ƒbƒv1</label>
-					<label><input type="radio" onclick="Button_Texture(2);" name="Button_Texture">ƒJƒ‰[ƒ}ƒbƒv2</label><br>
-					<label><input type="radio" onclick="Button_Texture(0);" name="Button_Texture">ŠC</label>
-					<label><input type="radio" onclick="Button_Texture(3);" name="Button_Texture">’n‹…</label>
-					<label><input type="radio" onclick="Button_Texture(4);" name="Button_Texture">ƒ~ƒN</label>
-					<label><input type="radio" onclick="Button_Texture(5);" name="Button_Texture" checked="checked">–³‚µ</label>
+					ãƒ†ã‚¯ã‚¹ãƒãƒ£åˆ‡ã‚Šæ›¿ãˆ<br>
+					<label><input type="radio" onclick="Button_Texture(1);" name="Button_Texture">ã‚«ãƒ©ãƒ¼ãƒžãƒƒãƒ—1</label>
+					<label><input type="radio" onclick="Button_Texture(2);" name="Button_Texture">ã‚«ãƒ©ãƒ¼ãƒžãƒƒãƒ—2</label><br>
+					<label><input type="radio" onclick="Button_Texture(0);" name="Button_Texture">æµ·</label>
+					<label><input type="radio" onclick="Button_Texture(3);" name="Button_Texture">åœ°çƒ</label>
+					<label><input type="radio" onclick="Button_Texture(4);" name="Button_Texture">ãƒŸã‚¯</label>
+					<label><input type="radio" onclick="Button_Texture(5);" name="Button_Texture" checked="checked">ç„¡ã—</label>
 					<hr>
 				</div>
 				<div id="RightMenu">
-					Œ`óØ‚è‘Ö‚¦<br>
-					<label><input type="radio" onclick="Button_Shape('Torus');" name="Button_Shape">ƒg[ƒ‰ƒX</label>
-					<label><input type="radio" onclick="Button_Shape('Sphere');" name="Button_Shape">‹…‘Ì</label><br>
-					<label><input type="radio" onclick="Button_Shape('Cube');" name="Button_Shape">—§•û‘Ì</label>
-					<label><input type="radio" onclick="Button_Shape('Teapot');" name="Button_Shape" checked="checked">ƒeƒB[ƒ|ƒbƒg</label>
+					å½¢çŠ¶åˆ‡ã‚Šæ›¿ãˆ<br>
+					<label><input type="radio" onclick="Button_Shape('Torus');" name="Button_Shape">ãƒˆãƒ¼ãƒ©ã‚¹</label>
+					<label><input type="radio" onclick="Button_Shape('Sphere');" name="Button_Shape">çƒä½“</label><br>
+					<label><input type="radio" onclick="Button_Shape('Cube');" name="Button_Shape">ç«‹æ–¹ä½“</label>
+					<label><input type="radio" onclick="Button_Shape('Teapot');" name="Button_Shape" checked="checked">ãƒ†ã‚£ãƒ¼ãƒãƒƒãƒˆ</label>
 					<hr>
 				</div>
 				<div id="LeftDat">
@@ -53,51 +53,51 @@
 				<div id="RightDat">
 				</div>
 				<div id="conte" style="display:none">
-			  		<strong>‘åŽG”c‚Èà–¾</strong>
+			  		<strong>å¤§é›‘æŠŠãªèª¬æ˜Ž</strong>
 					<ul>
-			  			<li><strong>ŠgŽUŒõ</strong>F•¨‘Ì‚ÌF
-			  			<li><strong>ŠÂ‹«Œõ</strong>F‘S‘Ì“I‚ÈF
-			  			<li><strong>‹¾–ÊŒõ</strong>FƒnƒCƒ‰ƒCƒg‚Ì•”•ª‚ÌF
-			  			<li><strong>•úŽËŒõ</strong>F•¨‘ÌŽ©M‚ª•ú‚ÂFBŒuŒõF‚Á‚Û‚­‚È‚éB
-			  			<li>ƒnƒCƒ‰ƒCƒg‚ÍÁ‚¹‚È‚¢H‚Ì‚Å’l‚ð‹É’[‚É‘å‚«‚­‚µ‚Ä‹[Ž—“I‚ÉÁ‹Ž
-			  			<li>‰º•”‚Ìƒ{ƒ^ƒ“‚ð‰Ÿ‚·‚ÆƒTƒ“ƒvƒ‹‚ÌÞŽ¿‚É•Ï‚í‚éB<br>
-			  				ƒTƒ“ƒvƒ‹‚Í<a href="http://www.natural-science.or.jp/article/20110313211402.php"> natural science‚³‚ñ</a>‚©‚çB<br>
-			  				iX‚ÉŒ³‚Ìƒtƒ@ƒCƒ‹‚Ízip‚É‚È‚Á‚Ä‚éj<br>
-			  			<li>ã‚Ìƒ{ƒ^ƒ“‚ð¶¨‰E¨‰E‚È‚Ç‚Ì‚æ‚¤‚É‰Ÿ‚·‚Æƒ{ƒ^ƒ“‚Æ‰æ–Ê‚Ì•\Ž¦‚ªˆê’v‚µ‚È‚­‚È‚é‚Ì‚ÍŽd—l<br>
-			  				<s><small>iŽÀŠQ–³‚¢‚µ‚ß‚ñ‚Ç‚­‚³‚¢‚µj</small></s>
-			  			<li>ƒ‰ƒCƒgÁ‚·¨‰º‚Ìƒ{ƒ^ƒ“‚ÅÞŽ¿•Ï‚¦‚é¨ƒ‰ƒCƒg“_‚¯‚é‚Æ‚â‚é‚Æƒ‰ƒCƒg‚ª“_‚©‚È‚¢B<br>
-			  				ƒ‰ƒCƒg“_‚¯‚é‚É‚µ‚½ó‘Ô‚Å“K“–‚É‰º‚Ìƒ{ƒ^ƒ“‰Ÿ‚·‚Æ’¼‚éB
+			  			<li><strong>æ‹¡æ•£å…‰</strong>ï¼šç‰©ä½“ã®è‰²
+			  			<li><strong>ç’°å¢ƒå…‰</strong>ï¼šå…¨ä½“çš„ãªè‰²
+			  			<li><strong>é¡é¢å…‰</strong>ï¼šãƒã‚¤ãƒ©ã‚¤ãƒˆã®éƒ¨åˆ†ã®è‰²
+			  			<li><strong>æ”¾å°„å…‰</strong>ï¼šç‰©ä½“è‡ªä¿¡ãŒæ”¾ã¤è‰²ã€‚è›å…‰è‰²ã£ã½ããªã‚‹ã€‚
+			  			<li>ãƒã‚¤ãƒ©ã‚¤ãƒˆã¯æ¶ˆã›ãªã„ï¼Ÿã®ã§å€¤ã‚’æ¥µç«¯ã«å¤§ããã—ã¦æ“¬ä¼¼çš„ã«æ¶ˆåŽ»
+			  			<li>ä¸‹éƒ¨ã®ãƒœã‚¿ãƒ³ã‚’æŠ¼ã™ã¨ã‚µãƒ³ãƒ—ãƒ«ã®æè³ªã«å¤‰ã‚ã‚‹ã€‚<br>
+			  				ã‚µãƒ³ãƒ—ãƒ«ã¯<a href="http://www.natural-science.or.jp/article/20110313211402.php"> natural scienceã•ã‚“</a>ã‹ã‚‰ã€‚<br>
+			  				ï¼ˆæ›´ã«å…ƒã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯zipã«ãªã£ã¦ã‚‹ï¼‰<br>
+			  			<li>ä¸Šã®ãƒœã‚¿ãƒ³ã‚’å·¦â†’å³â†’å³ãªã©ã®ã‚ˆã†ã«æŠ¼ã™ã¨ãƒœã‚¿ãƒ³ã¨ç”»é¢ã®è¡¨ç¤ºãŒä¸€è‡´ã—ãªããªã‚‹ã®ã¯ä»•æ§˜<br>
+			  				<s><small>ï¼ˆå®Ÿå®³ç„¡ã„ã—ã‚ã‚“ã©ãã•ã„ã—ï¼‰</small></s>
+			  			<li>ãƒ©ã‚¤ãƒˆæ¶ˆã™â†’ä¸‹ã®ãƒœã‚¿ãƒ³ã§æè³ªå¤‰ãˆã‚‹â†’ãƒ©ã‚¤ãƒˆç‚¹ã‘ã‚‹ã¨ã‚„ã‚‹ã¨ãƒ©ã‚¤ãƒˆãŒç‚¹ã‹ãªã„ã€‚<br>
+			  				ãƒ©ã‚¤ãƒˆç‚¹ã‘ã‚‹ã«ã—ãŸçŠ¶æ…‹ã§é©å½“ã«ä¸‹ã®ãƒœã‚¿ãƒ³æŠ¼ã™ã¨ç›´ã‚‹ã€‚
 			  		</ul>
 			  	</div>
 			</div>
 		</div>
 		<div id="footer">
 			<div id="inner">
-				<button onclick="MS.white();">”’</button>
-				<button onclick="MS.ruby();">ƒ‹ƒr[</button>
-				<button onclick="MS.emerald();">ƒGƒƒ‰ƒ‹ƒh</button>
-				<button onclick="MS.jade();">ãÅ‰</button>
-				<button onclick="MS.obsidian();">•—jÎ</button>
-				<button onclick="MS.pearl();">^Žì</button>
-				<button onclick="MS.turquoise();">ƒgƒ‹ƒRÎ</button>
-				<button onclick="MS.brass();">^èJ</button>
-				<button onclick="MS.bronze();">Â“º</button>
-				<button onclick="MS.chrome();">ƒNƒ[ƒ€</button>
-				<button onclick="MS.copper();">“º</button>
-				<button onclick="MS.gold();">‹à</button>
-				<button onclick="MS.silver();">‹â</button><br>
-				<button onclick="MS.black_plastic();">ƒvƒ‰ƒXƒ`ƒbƒN•</button>
-				<button onclick="MS.cyan_plastic();">ƒvƒ‰…</button>
-				<button onclick="MS.green_plastic();">ƒvƒ‰—Î</button>
-				<button onclick="MS.red_plastic();">ƒvƒ‰Ô</button>
-				<button onclick="MS.white_plastic();">ƒvƒ‰”’</button>
-				<button onclick="MS.yellow_plastic();">ƒvƒ‰‰©</button>
-				<button onclick="MS.black_rubber();">ƒSƒ€•</button>
-				<button onclick="MS.cyan_rubber();">ƒSƒ€…</button>
-				<button onclick="MS.green_rubber();">ƒSƒ€—Î</button>
-				<button onclick="MS.red_rubber();">ƒSƒ€Ô</button>
-				<button onclick="MS.white_rubber();">ƒSƒ€”’</button>
-				<button onclick="MS.yellow_rubber();">ƒSƒ€‰©</button>
+				<button onclick="MS.white();">ç™½</button>
+				<button onclick="MS.ruby();">ãƒ«ãƒ“ãƒ¼</button>
+				<button onclick="MS.emerald();">ã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰</button>
+				<button onclick="MS.jade();">ç¿¡ç¿ </button>
+				<button onclick="MS.obsidian();">é»’æ›œçŸ³</button>
+				<button onclick="MS.pearl();">çœŸç </button>
+				<button onclick="MS.turquoise();">ãƒˆãƒ«ã‚³çŸ³</button>
+				<button onclick="MS.brass();">çœŸé®</button>
+				<button onclick="MS.bronze();">é’éŠ…</button>
+				<button onclick="MS.chrome();">ã‚¯ãƒ­ãƒ¼ãƒ </button>
+				<button onclick="MS.copper();">éŠ…</button>
+				<button onclick="MS.gold();">é‡‘</button>
+				<button onclick="MS.silver();">éŠ€</button><br>
+				<button onclick="MS.black_plastic();">ãƒ—ãƒ©ã‚¹ãƒãƒƒã‚¯é»’</button>
+				<button onclick="MS.cyan_plastic();">ãƒ—ãƒ©æ°´</button>
+				<button onclick="MS.green_plastic();">ãƒ—ãƒ©ç·‘</button>
+				<button onclick="MS.red_plastic();">ãƒ—ãƒ©èµ¤</button>
+				<button onclick="MS.white_plastic();">ãƒ—ãƒ©ç™½</button>
+				<button onclick="MS.yellow_plastic();">ãƒ—ãƒ©é»„</button>
+				<button onclick="MS.black_rubber();">ã‚´ãƒ é»’</button>
+				<button onclick="MS.cyan_rubber();">ã‚´ãƒ æ°´</button>
+				<button onclick="MS.green_rubber();">ã‚´ãƒ ç·‘</button>
+				<button onclick="MS.red_rubber();">ã‚´ãƒ èµ¤</button>
+				<button onclick="MS.white_rubber();">ã‚´ãƒ ç™½</button>
+				<button onclick="MS.yellow_rubber();">ã‚´ãƒ é»„</button>
 			</div>
 		</div>
 	</div>

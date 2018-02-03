@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 	
 	<title>
-		Blender�ǂݍ���
+		Blender読み込み
 	</title>
 </head>
 	
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				Blender�ǂݍ���
+				Blender読み込み
 			</div>
 		</div>
 		
@@ -33,7 +33,7 @@
 			<div id="right">
 				<div id="inner-right">
 					<font size="2"><br>
-					�G�N�X�|�[�g���ɕ\�����Ă����^�C�����C���̏�Ԃ��ۑ������炵���B<br>
+					エクスポート時に表示していたタイムラインの状態が保存されるらしい。<br>
 					<input type="radio" name="model" id="model1" onclick="Button('water1.js', 1)" checked="checked">1<br>
 					<input type="radio" name="model" id="model2" onclick="Button('water2.js', 1)">2<br>
 					<input type="radio" name="model" id="model3" onclick="Button('water3.js', 1)">3<br>

@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./import15-3.js"></script>
 	<script>
 	if(!Detector.webgl){
-		alert("WebGL�Ή��u���E�U�Ō��ĉ������B\nFirefox��Chrome�ł̂ݓ���m�F���Ă܂��B");
+		alert("WebGL対応ブラウザで見て下さい。\nFirefoxとChromeでのみ動作確認してます。");
 		Detector.addGetWebGLMessage();
 	}
 	</script>
 
 	<title>
-		�L���[�u�Ƀ����N
+		キューブにリンク
 	</title>
 </head>
 	
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				�L���[�u�Ƀ����N
+				キューブにリンク
 			</div>
 		</div>
 		
@@ -34,13 +34,13 @@
 				<div id="inner-right">
 					<font size = "3">
 					<form name="box">
-						<label>��]�~�߂�F<input type="checkbox" onclick="set();" name="off" id="off"></label><br>
-						<input type="text" name="faceIndex" id="faceIndex" size="40" value="������URL���\������܂�"><br><br>
+						<label>回転止める：<input type="checkbox" onclick="set();" name="off" id="off"></label><br>
+						<input type="text" name="faceIndex" id="faceIndex" size="40" value="ここにURLが表示されます"><br><br>
 					</form>
-					�L���[�u�̊e�ʂɃ����N�\���Ă݂��B<br>
-					�}�E�X�悹��Ɓ���URL���\�������B<br>
-					�N���b�N����ƈړ�����B<br><br>
-					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">����݂����Ȃ���</a>
+					キューブの各面にリンク貼ってみた。<br>
+					マウス乗せると↑にURLが表示される。<br>
+					クリックすると移動する。<br><br>
+					<a href="http://www47.atpages.jp/sensq/blog/2013/08/11/226/" target="_blank">解説みたいなもの</a>
 					</font>
 				</div>
 			</div>
