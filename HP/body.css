@@ -1,0 +1,33 @@
+/* --- 全体 --- */
+body {
+padding: 0px;
+background-color: #ffffff;
+}
+
+/* コンテナ */
+#container {
+width: 600px; /* ページの幅 */
+margin: 0 auto; /* センタリング */
+}
+
+/* 左ペイン */
+#left {
+background-color: #fcfcfc;
+float: left;
+width: 50%;
+height: 553px;
+}
+
+/* 右ペイン */
+#right {
+background-color: #fcfcfc;
+float: left;
+width: 50%;
+}
+
+/* フッター */
+#footer {
+background-color: #ffffff;
+clear: left;
+width: 100%;
+}
