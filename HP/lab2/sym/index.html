@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,7 +15,7 @@
 	<script src="./js.js"></script>
 
 	<title>
-		�V�����g���[�摜�쐬
+		シンメトリー画像作成
 	</title>
 </head>
 
@@ -23,38 +23,38 @@
 	<div id="container">
 	<div id="header">
 		<div id="inner">
-			�V�����g���[
+			シンメトリー
 		</div>
 	</div>
-		���[�J������摜��ǂݍ��݁i�摜�\�������Ƀh���b�O&�h���b�v�ł��ǂݍ��߂܂��j<br>
+		ローカルから画像を読み込み（画像表示部分にドラッグ&ドロップでも読み込めます）<br>
 		<font size="2">
-		���摜���\������Ȃ��ꍇ�͍X�V���邩�ǂݍ��݃{�^���������ĉ������B�i100�~100����300�~300���x�����j<br>
-		���摜�̓T�[�o�ɕۑ����ꂽ��͂��܂���B</font><br>
-		<a href="http://seiga.nicovideo.jp/seiga/im1834708"><font size=2>���摜����Ɏg�킹�Ă�����Ă܂�</font></a><br>
+		※画像が表示されない場合は更新するか読み込みボタンを押して下さい。（100×100から300×300程度推奨）<br>
+		※画像はサーバに保存されたりはしません。</font><br>
+		<a href="http://seiga.nicovideo.jp/seiga/im1834708"><font size=2>※画像勝手に使わせてもらってます</font></a><br>
 		<input type="file" id="loadImg" onchange="loadImg()">
-		<button onclick="loadImg()" id="update">�ǂݍ���</button>
+		<button onclick="loadImg()" id="update">読み込み</button>
 		<output id="list"></output><br>
-		<font size="2">URL�Ŏw��F</font><input type="text" id="URL" size="60" onChange="url();">
-		<button onclick="url()" id="urlButton">�ǂݍ���</button>
+		<font size="2">URLで指定：</font><input type="text" id="URL" size="60" onChange="url();">
+		<button onclick="url()" id="urlButton">読み込み</button>
 		<hr>
 		<div id="cont">
-			���]�Ɏg��������I��<br>
-			<button onclick="imgConvert.Init();" id="Init">�߂�</button>
-			<button onclick="imgConvert.Left();" id="Left">��</button>
-			<button onclick="imgConvert.Right();" id="Right">�E</button>
-			<button onclick="imgConvert.Top();" id="Top">��</button>
-			<button onclick="imgConvert.Bottom();" id="Bottom">��</button>
+			反転に使う部分を選択<br>
+			<button onclick="imgConvert.Init();" id="Init">戻す</button>
+			<button onclick="imgConvert.Left();" id="Left">左</button>
+			<button onclick="imgConvert.Right();" id="Right">右</button>
+			<button onclick="imgConvert.Top();" id="Top">上</button>
+			<button onclick="imgConvert.Bottom();" id="Bottom">下</button>
 			<br>
-			<button onclick="imgConvert.tLeft();" id="tLeft">����</button>
-			<button onclick="imgConvert.tRight();" id="tRight">�E��</button>
-			<button onclick="imgConvert.bLeft();" id="bLeft">����</button>
-			<button onclick="imgConvert.bRight();" id="bRight">�E��</button>
+			<button onclick="imgConvert.tLeft();" id="tLeft">左上</button>
+			<button onclick="imgConvert.tRight();" id="tRight">右上</button>
+			<button onclick="imgConvert.bLeft();" id="bLeft">左下</button>
+			<button onclick="imgConvert.bRight();" id="bRight">右下</button>
 		</div>
 		<hr>
 		<canvas id="img">
-			���g���̃u���E�U�ɂ͑Ή����Ă��܂���B<br>
-			Chrome, Firefox, Opera, Safari�ł̓���͊m�F���Ă��܂��B<br>
-			�܂����܂�<b>Internet Explorer�i�ʏ�IE�j</b><img src="IE.jpeg" width="40px" height="40px">�����g���ɂȂ��Ă���̂ł��傤���H
+			お使いのブラウザには対応していません。<br>
+			Chrome, Firefox, Opera, Safariでの動作は確認しています。<br>
+			まさかまだ<b>Internet Explorer（通称IE）</b><img src="IE.jpeg" width="40px" height="40px">をお使いになられているのでしょうか？
 		</canvas>
 		<canvas id="outputImg" color="white">
 		</canvas>

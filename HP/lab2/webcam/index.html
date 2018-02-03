@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -29,50 +29,50 @@
 			WebCamera
 		</div>
 	</div>
-		Web�J�����̉摜��ǂݍ���ŊȒP�ȉ摜���������ĕ`��<br>
-		���F�Ƃ��Ƃ������Ă��邯�ǁA�p�����[�^�M��Α��̐F�ɂ��ł��܂��B<br>
-		<a href="http://www47.atpages.jp/sensq/blog/2014/02/28/657/">����Ƃ�����Ƃ�</a>
+		Webカメラの画像を読み込んで簡単な画像処理かけて描画<br>
+		肌色とか青とか書いてあるけど、パラメータ弄れば他の色にもできます。<br>
+		<a href="http://www47.atpages.jp/sensq/blog/2014/02/28/657/">解説とか動画とか</a>
 		<hr>
 		<div class="boxOut">
 			<script language="javascript">
 				crocro.jscam.write({w:320, h:240});
 			</script>
 			<br>
-			<input type="button" id="cap" onClick="captureImg()" value="�L���v�`��">
-			<input type="button" id="np" value="�l�K�|�W">
-			<input type="button" id="edge" value="�G�b�W���o">
-			<input type="button" id="bin" value="�G�b�W���o+��l��">
-			<input type="text" id="binV" size="3" step="1" placeholder="200"><font size="2">臒l</font>
+			<input type="button" id="cap" onClick="captureImg()" value="キャプチャ">
+			<input type="button" id="np" value="ネガポジ">
+			<input type="button" id="edge" value="エッジ検出">
+			<input type="button" id="bin" value="エッジ検出+二値化">
+			<input type="text" id="binV" size="3" step="1" placeholder="200"><font size="2">閾値</font>
 			<br>
-			<input type="button" id="skin" value="���F���o">
-			<input type="button" id="cro" value="�N���}�L�[�i�j">
-			<input type="button" id="stop" value="�X�g�b�v">
+			<input type="button" id="skin" value="肌色抽出">
+			<input type="button" id="cro" value="クロマキー（青）">
+			<input type="button" id="stop" value="ストップ">
 			<br>
-				<font size="2">���F�͈̔͐ݒ�F</font>
-				H�F
+				<font size="2">肌色の範囲設定：</font>
+				H：
 				<input type="text" id="hueStart" size="3" step="1" placeholder="80"><font size="2">-</font>
 				<input type="text" id="hueEnd" size="3" step="1" placeholder="180"><font size="2"></font>
-				S�F
+				S：
 				<input type="text" id="satStart" size="3" step="1" placeholder="100"><font size="2">-</font>
 				<input type="text" id="satEnd" size="3" step="1" placeholder="255"><font size="2"></font>
-				V�F
+				V：
 				<input type="text" id="volStart" size="3" step="1" placeholder="80"><font size="2">-</font>
 				<input type="text" id="volEnd" size="3" step="1" placeholder="255">
 			<br>
-				<font size="2">�F�͈̔͐ݒ�F</font>
-				H�F
+				<font size="2">青色の範囲設定：</font>
+				H：
 				<input type="text" id="hueStartT" size="3" step="1" placeholder="80"><font size="2">-</font>
 				<input type="text" id="hueEndT" size="3" step="1" placeholder="180"><font size="2"></font>
-				S�F
+				S：
 				<input type="text" id="satStartT" size="3" step="1" placeholder="100"><font size="2">-</font>
 				<input type="text" id="satEndT" size="3" step="1" placeholder="255"><font size="2"></font>
-				V�F
+				V：
 				<input type="text" id="volStartT" size="3" step="1" placeholder="80"><font size="2">-</font>
 				<input type="text" id="volEndT" size="3" step="1" placeholder="255">
 			<br>
 			<canvas id="cnvsCap" width="320" height="240"></canvas>
 			<div id="info">
-				R:0�@G:0�@B:0�@A:0�@�@H:0�@S:0�@V:0
+				R:0　G:0　B:0　A:0　　H:0　S:0　V:0
 			</div>
 			<div id="resData"></div>
 		</div>

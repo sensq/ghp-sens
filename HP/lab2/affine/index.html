@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,7 +15,7 @@
 	<script src="./js.js"></script>
 
 	<title>
-		HTML5�ŃA�t�B���ϊ�
+		HTML5でアフィン変換
 	</title>
 </head>
 
@@ -23,26 +23,26 @@
 	<div id="container">
 	<div id="header">
 		<div id="inner">
-			�A�t�B���ϊ�
+			アフィン変換
 		</div>
 	</div>
-		���[�J������摜��ǂݍ���<br>
+		ローカルから画像を読み込み<br>
 		<font size="2">
-		���摜���\������Ȃ��ꍇ�͍X�V���邩�ǂݍ��݃{�^���������ĉ������B�i100�~100����300�~300���x�����j<br>
-		���摜�̓T�[�o�ɕۑ����ꂽ��͂��܂���B</font><br>
+		※画像が表示されない場合は更新するか読み込みボタンを押して下さい。（100×100から300×300程度推奨）<br>
+		※画像はサーバに保存されたりはしません。</font><br>
 		<input type="file" id="loadImg" onchange="loadImg()">
-		<button onclick="loadImg()" id="update">�ǂݍ���</button>
+		<button onclick="loadImg()" id="update">読み込み</button>
 		<output id="list"></output>
 		<hr>
 		<div id="cont">
-			���s�ړ��i�ʒu�������p�j<br>
+			平行移動（位置微調整用）<br>
 			<div id="translate">
 				x:<input type="number" id="trans_x" size="3" placeholder="0">
 				y:<input type="number" id="trans_y" size="3" placeholder="0">
 				<br><br>
 			</div>
 			<div id="affine">
-				�ϊ��s��<br>
+				変換行列<br>
 				<input type="text" id="affine00" size="6">
 				<input type="text" id="affine01" size="6">
 				<input type="text" id="affine02" size="6">
@@ -54,30 +54,30 @@
 				<input type="text" id="affine20" size="6">
 				<input type="text" id="affine21" size="6">
 				<input type="text" id="affine22" size="6">
-				<button onclick="imgConvert.affine();" id="affine">���s</button>
-				<button onclick="rand();" id="rand">�����_�����s</button>
+				<button onclick="imgConvert.affine();" id="affine">実行</button>
+				<button onclick="rand();" id="rand">ランダム実行</button>
 			</div>
 			<br>
-			�O�p�֐��v�Z�p�F��<input type="number" id="theta" size="3" placeholder="30" onKeyup="trigono();" onKeypress="pressEnter(event.keyCode);">�@��
+			三角関数計算用：θ<input type="number" id="theta" size="3" placeholder="30" onKeyup="trigono();" onKeypress="pressEnter(event.keyCode);">　→
 				sin:<input type="text" id="sin" size="5" style="background-color:#cccccc;">
 				cos:<input type="text" id="cos" size="5" style="background-color:#cccccc;">
 				tan:<input type="text" id="tan" size="5" style="background-color:#cccccc;">
 			<br>
-			�ȈՓ��̓{�^��<br>
-			<button onclick="easyConvert.init();" id="init">������</button>
-			<button onclick="easyConvert.scale();" id="scale">�g��k��</button>
-			<button onclick="easyConvert.xmirror();" id="xmirror">���f(x��)</button>
-			<button onclick="easyConvert.rot();" id="rot">��]</button>
-			<button onclick="easyConvert.skew();" id="skew">���f(x)</button>
-			<button onclick="easyConvert.xyskew();" id="xyskew">���f(x,y)</button>
+			簡易入力ボタン<br>
+			<button onclick="easyConvert.init();" id="init">初期化</button>
+			<button onclick="easyConvert.scale();" id="scale">拡大縮小</button>
+			<button onclick="easyConvert.xmirror();" id="xmirror">鏡映(x軸)</button>
+			<button onclick="easyConvert.rot();" id="rot">回転</button>
+			<button onclick="easyConvert.skew();" id="skew">剪断(x)</button>
+			<button onclick="easyConvert.xyskew();" id="xyskew">剪断(x,y)</button>
 			<br>
-			<a href="../../blog/2013/08/24/277/"><i><big><b>���</b></big></i></a>
+			<a href="../../blog/2013/08/24/277/"><i><big><b>解説</b></big></i></a>
 		</div>
 		<hr>
 		<canvas id="img">
-			���g���̃u���E�U�ɂ͑Ή����Ă��܂���B<br>
-			Chrome, Firefox, Opera, Safari�ł̓���͊m�F���Ă��܂��B<br>
-			�܂����܂�<b>Internet Explorer�i�ʏ�IE�j</b><img src="IE.jpeg" width="40px" height="40px">�����g���ɂȂ��Ă���̂ł��傤���H
+			お使いのブラウザには対応していません。<br>
+			Chrome, Firefox, Opera, Safariでの動作は確認しています。<br>
+			まさかまだ<b>Internet Explorer（通称IE）</b><img src="IE.jpeg" width="40px" height="40px">をお使いになられているのでしょうか？
 		</canvas>
 		<canvas id="outputImg" color="white">
 		</canvas>

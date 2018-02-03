@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./sort.js"></script>
 
 	<title>
-		�\�[�g
+		ソート
 	</title>
 </head>
 
 <body>
 	<div id="container">
 		<div id="header">
-			<h2>�\�[�g</h2>
+			<h2>ソート</h2>
 			<hr>
 		</div>
-		<b>���̓f�[�^</b><br>
+		<b>入力データ</b><br>
 		<form name="Data">
 			<input type="text" name="data1" id="data1" size="3">
 			<input type="text" name="data2" id="data2" size="3">
@@ -28,9 +28,9 @@
 			<input type="text" name="data8" id="data8" size="3">
 		</form>
 		<hr>
-		<!--�o�u���\�[�g-->
-		�o�u���\�[�g<br>
-		<button onclick="initBubble();" id="initBubble">�ǂݍ���</button><button onclick="sortBubble();" id="sortBubble">���s</button>
+		<!--バブルソート-->
+		バブルソート<br>
+		<button onclick="initBubble();" id="initBubble">読み込み</button><button onclick="sortBubble();" id="sortBubble">実行</button>
 		<div id="timesBubble">
 		</div>
 		<div id="Bubble">
@@ -44,9 +44,9 @@
 			<input type="text" name="bubble8" id="bubble8" size="3">
 		</div>
 		<hr>
-		<!--�N�C�b�N�\�[�g-->
-		�N�C�b�N�\�[�g�i1�X�e�b�v���ł��Ȃ��E�E�E�j<br>
-		<button onclick="initQuick();" id="initQuick">�ǂݍ���</button><button onclick="sortQuick(start,end);" id="sortQuick">���s</button>
+		<!--クイックソート-->
+		クイックソート（1ステップずつできない・・・）<br>
+		<button onclick="initQuick();" id="initQuick">読み込み</button><button onclick="sortQuick(start,end);" id="sortQuick">実行</button>
 		<div id="timesQuick">
 		</div>
 		<div id="Quick">

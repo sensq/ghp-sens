@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./js.js"></script>
 	<script>
@@ -14,7 +14,7 @@
 		ga('send', 'pageview');
 	</script>
 	<title>
-		LaTeX�̍s�񐶐�
+		LaTeXの行列生成
 	</title>
 </head>
 
@@ -22,18 +22,18 @@
 	<div id="container">
 		<div id="header">
 			<div id="inner">
-				LaTeX�̍s�񐶐�
+				LaTeXの行列生成
 			</div>
 		</div>
 		<div id="plane">
-			<b>�y�g�����z</b><br>
-			1.��������s��̍s���Ɨ񐔂���͂�����{�^���������B<br>
-			2.�e�{�b�N�X�̈ʒu�ƍs��̈ʒu���Ή����Ă���̂ŁATeX�̌`���œ��͂���B<br>
-			3.TeX�̃\�[�X�Ɖ摜�����������B�y�I�I
+			<b>【使い方】</b><br>
+			1.生成する行列の行数と列数を入力したらボタンを押す。<br>
+			2.各ボックスの位置と行列の位置が対応しているので、TeXの形式で入力する。<br>
+			3.TeXのソースと画像が生成される。楽！！
 			<hr>
-			�s�F<input type="text" size="2" id="row">
-			��F<input type="text" size="2" id="col">
-			<input type="button" size="2" id="col" value="���͗�����" onClick="createMatrix();">
+			行：<input type="text" size="2" id="row">
+			列：<input type="text" size="2" id="col">
+			<input type="button" size="2" id="col" value="入力欄生成" onClick="createMatrix();">
 			<hr>
 		</div>
 		<div id="matrix">
@@ -41,17 +41,17 @@
 		<hr>
 		
 		<div id="LaTeX">
-			<form name="sizebox">�T�C�Y�i�𑜓x�j�F<input type="text" name="sizebox" id="sizebox" size="7" onkeyup="LaTeX()"><font size="1">���傫����������ƕ\���Ɏ��Ԃ�������܂�</font></form>
+			<form name="sizebox">サイズ（解像度）：<input type="text" name="sizebox" id="sizebox" size="7" onkeyup="LaTeX()"><font size="1">※大きくしすぎると表示に時間がかかります</font></form>
             <form>
-				���ʂ̎�ށF
+				括弧の種類：
 				<select name="bracket" onchange="selectBracket(this)">
-				<option value="">[ ] �ʏ�1</option>
-				<option value="">( ) �ʏ�2</option>
-				<option value="">| | �s��</option>
-				<option value="">����</option>
+				<option value="">[ ] 通常1</option>
+				<option value="">( ) 通常2</option>
+				<option value="">| | 行列式</option>
+				<option value="">無し</option>
 				</select>
 			</form>
-			<form name="setColor">�J���[�F<input type="text" name="setColor" id="setColor" size="15" onkeyup="createMatrixEq()"><font size="1">��RGB�ł��ꂼ��0�`1�͈̔͂Ŏw��</font></form>
+			<form name="setColor">カラー：<input type="text" name="setColor" id="setColor" size="15" onkeyup="createMatrixEq()"><font size="1">※RGBでそれぞれ0～1の範囲で指定</font></form>
 			<form name="textbox"><textarea name="textbox" type="text" id="textbox" rows="3" cols="80" onkeyup="LaTeX()"></textarea>
 			</form>
 			

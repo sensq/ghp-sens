@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,7 +15,7 @@
 	<script src="./js.js"></script>
 
 	<title>
-		�u�����f�B���O
+		ブレンディング
 	</title>
 </head>
 
@@ -23,73 +23,73 @@
 	<div id="container">
 	<div id="header">
 		<div id="inner">
-			�u�����f�B���O
+			ブレンディング
 		</div>
 	</div>
-		Photoshop�ɓ����Ă���u�����h���[�h�̎���<br>
-		<i>�`��G���A�Ƀh���b�O���h���b�v�Ń��[�J���̉摜��ǂݍ��߂܂��B</i></font><br>
-		<i>2���̃T�C�Y�i���m�ɂ̓A�X�y�N�g��j���قȂ�Ƃ��������Ȃ邯�ǒ����Ă܂���B</i></font><br>
+		Photoshopに入っているブレンドモードの実装<br>
+		<i>描画エリアにドラッグ＆ドロップでローカルの画像を読み込めます。</i></font><br>
+		<i>2枚のサイズ（正確にはアスペクト比）が異なるとおかしくなるけど直せてません。</i></font><br>
 		<hr>
 		<output hidden id="list"></output>
 		<div id="cont">
 			<div id="siki">
-				<a href="http://www47.atpages.jp/sensq/blog/2014/02/02/632/"><i>�g����</i></a>�@
+				<a href="http://www47.atpages.jp/sensq/blog/2014/02/02/632/"><i>使い方</i></a>　
 				<br>
-				Basic�F
-				<button onclick="CV.blend('add');" id="add">���Z</button>
-				<button onclick="CV.blend('diff');" id="diff">���Z</button>
-				<button onclick="CV.blend('exclusion');" id="exclusion">���O</button>
-				<button onclick="CV.blend('abs');" id="abs">���̐�Βl</button>
+				Basic：
+				<button onclick="CV.blend('add');" id="add">加算</button>
+				<button onclick="CV.blend('diff');" id="diff">減算</button>
+				<button onclick="CV.blend('exclusion');" id="exclusion">除外</button>
+				<button onclick="CV.blend('abs');" id="abs">差の絶対値</button>
 				<br>
-				Darken�F
-				<button hidden onclick="CV.blend('compD');" id="compD">�~��r�i�Áj</button>
-				<button onclick="CV.blend('multi');" id="multi">��Z</button>
-				<button onclick="CV.blend('burn');" id="burn">�Ă�����</button>
+				Darken：
+				<button hidden onclick="CV.blend('compD');" id="compD">×比較（暗）</button>
+				<button onclick="CV.blend('multi');" id="multi">乗算</button>
+				<button onclick="CV.blend('burn');" id="burn">焼き込み</button>
 				<br>
-				Lighten�F
-				<button hidden onclick="CV.blend('compL');" id="compL">�~��r�i���j</button>
-				<button onclick="CV.blend('screen');" id="screen">�X�N���[��</button>
-				<button onclick="CV.blend('dodge');" id="dodge">�����Ă�</button>
+				Lighten：
+				<button hidden onclick="CV.blend('compL');" id="compL">×比較（明）</button>
+				<button onclick="CV.blend('screen');" id="screen">スクリーン</button>
+				<button onclick="CV.blend('dodge');" id="dodge">覆い焼き</button>
 				<br>
-				Contrast�F
-				<button onclick="CV.blend('overlay');" id="overlay">�I�[�o�[���C</button>
-				<button onclick="CV.blend('soft');" id="soft">�\�t�g���C�g</button>
-				<button onclick="CV.blend('hard');" id="hard">�n�[�h���C�g</button>
-				<button onclick="CV.blend('vivid');" id="vivid">�r�r�b�h���C�g</button>
-				<button onclick="CV.blend('linear');" id="linear">���j�A���C�g</button>
-				<button onclick="CV.blend('pin');" id="pin">�s�����C�g</button>
+				Contrast：
+				<button onclick="CV.blend('overlay');" id="overlay">オーバーレイ</button>
+				<button onclick="CV.blend('soft');" id="soft">ソフトライト</button>
+				<button onclick="CV.blend('hard');" id="hard">ハードライト</button>
+				<button onclick="CV.blend('vivid');" id="vivid">ビビッドライト</button>
+				<button onclick="CV.blend('linear');" id="linear">リニアライト</button>
+				<button onclick="CV.blend('pin');" id="pin">ピンライト</button>
 				<br>
-				Other�F
-				<button onclick="CV.blend('vividmis');" id="vividmis">�r�r�b�h���C�g�̃~�X</button>
+				Other：
+				<button onclick="CV.blend('vividmis');" id="vividmis">ビビッドライトのミス</button>
 				<br>
-				<label><input type="checkbox" id="change" onChange="CV.change();">�摜�����ւ���</label>
-				<label><input type="checkbox" id="transparent">�����C���[�����������͓���</label>
-				<input type="number" id="opacity" size="3" min="0" max="255" placeholder="128"><font size="2">臒l</font>
+				<label><input type="checkbox" id="change" onChange="CV.change();">画像を入れ替える</label>
+				<label><input type="checkbox" id="transparent">下レイヤーが白い部分は透過</label>
+				<input type="number" id="opacity" size="3" min="0" max="255" placeholder="128"><font size="2">閾値</font>
 				<label><input type="checkbox" id="resize" hidden></label>
 				<label><input type="checkbox" id="copy" hidden></label>
 			</div>
 			<hr>
 			<div id="other">
-				<button onclick="setBlendImage2('miku.jpg', 'divImg2');" id="b1">�u�����h�p�摜1</button>
-				<button onclick="setBlendImage2('blend.png', 'divImg2');" id="b2">�u�����h�p�摜2</button>
-				<button onclick="setBlendImage2('silhouette.png', 'divImg2');" id="b3">�u�����h�p�摜3</button>
-				<button onclick="setBlendImage2('js_glow.png', 'divImg2');" id="b4">�u�����h�p�摜4</button>
-				<button onclick="CV.save();" id="save">�ۑ�</button>
+				<button onclick="setBlendImage2('miku.jpg', 'divImg2');" id="b1">ブレンド用画像1</button>
+				<button onclick="setBlendImage2('blend.png', 'divImg2');" id="b2">ブレンド用画像2</button>
+				<button onclick="setBlendImage2('silhouette.png', 'divImg2');" id="b3">ブレンド用画像3</button>
+				<button onclick="setBlendImage2('js_glow.png', 'divImg2');" id="b4">ブレンド用画像4</button>
+				<button onclick="CV.save();" id="save">保存</button>
 				<br>
-				���F�����C���[�i�d�˂���摜�j�A���F�ヌ�C���[�i�d�˂�摜�j�A�E�F����
+				左：下レイヤー（重ねられる画像）、中：上レイヤー（重ねる画像）、右：結果
 			</div>
 		</div>
 		<hr>
 		<canvas id="divImg1">
-			���g���̃u���E�U�ɂ͑Ή����Ă��܂���B<br>
-			Chrome, Firefox, Opera, Safari�ł̓���͊m�F���Ă��܂��B<br>
-			�܂����܂�<b>Internet Explorer�i�ʏ�IE�j</b><img src="IE.jpeg" width="40px" height="40px">�����g���ɂȂ��Ă���̂ł��傤���H
+			お使いのブラウザには対応していません。<br>
+			Chrome, Firefox, Opera, Safariでの動作は確認しています。<br>
+			まさかまだ<b>Internet Explorer（通称IE）</b><img src="IE.jpeg" width="40px" height="40px">をお使いになられているのでしょうか？
 		</canvas>
 		<canvas id="divImg2">
-		�摜�`��̈�
+		画像描画領域
 		</canvas>
 		<canvas id="blendImg">
-		�摜�`��̈�
+		画像描画領域
 		</canvas>
 	</div>
 </body>

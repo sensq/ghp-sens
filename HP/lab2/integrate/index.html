@@ -1,36 +1,36 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./probability.js"></script>
 
 	<title>
-		��ϕ��̌v�Z
+		定積分の計算
 	</title>
 </head>
 
 <body>
 	<div id="container">
 		<div id="header">
-			<h2>��ϕ��̌v�Z</h2>
+			<h2>定積分の計算</h2>
 			<hr>
 		</div>
-		<b>��`����</b><br>
+		<b>台形公式</b><br>
 		<form name="int">
-		�֐��Fy = <input type="text" name="Func" id="Func" size="20" onkeyup="Integrate(),FuncInput()">
-		<font size=2>������A���Ӗ�</font>
+		関数：y = <input type="text" name="Func" id="Func" size="20" onkeyup="Integrate(),FuncInput()">
+		<font size=2>※現状、無意味</font>
 		<br><br>
-		���[�F<input type="text" name="left" id="left" size="5" onkeyup="Integrate()"><br>
-		�E�[�F<input type="text" name="right" id="right" size="5" onkeyup="Integrate()"><br>
-		�������F<input type="text" name="divide" id="divide" size="5" onkeyup="Integrate()">
+		左端：<input type="text" name="left" id="left" size="5" onkeyup="Integrate()"><br>
+		右端：<input type="text" name="right" id="right" size="5" onkeyup="Integrate()"><br>
+		分割数：<input type="text" name="divide" id="divide" size="5" onkeyup="Integrate()">
 		</form><br>
 		<div id="integrate">
-			���Ȃ��Ƃ����͋N����m��
+			少なくとも一回は起こる確率
 		</div>
 		<hr align=left width=350px>
 		<div id="kakunin">
-			�擾�̊m�F
+			取得の確認
 		</div>
 	</div>
 </body>

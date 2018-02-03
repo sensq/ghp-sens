@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./js.js"></script>
 	<script>
@@ -26,77 +26,77 @@
 			TweenJS
 		</div>
 	</div>
-	��r�I�ȒP�ȋL�q�Ŋ��炩�ȃA�j���[�V�������s����<a href="https://github.com/sole/tween.js/">���C�u����</a>�B<br>
-	��̓I�ɂ́A�J�n�l�ƏI���l�ƃA�j���[�V�������Ԃ��w�肷��ƊԂ̒l���Ԃ��đ������Ă���Ă���B<br>
-	��Ԃ̎d���ɂ͐F�X�Ȏ�ނ�����A<a href="http://learningthreejs.com/data/tweenjs_for_smooth_animation/tweenjs_for_smooth_animation.html">����</a>�ł��ꂼ��ǂ�ȓ���������̂��m�F�ł���B
+	比較的簡単な記述で滑らかなアニメーションを行える<a href="https://github.com/sole/tween.js/">ライブラリ</a>。<br>
+	具体的には、開始値と終了値とアニメーション時間を指定すると間の値を補間して増減してくれている。<br>
+	補間の仕方には色々な種類があり、<a href="http://learningthreejs.com/data/tweenjs_for_smooth_animation/tweenjs_for_smooth_animation.html">ここ</a>でそれぞれどんな動きをするのか確認できる。
 	<hr>
-	<input type="button" name="timerButton" value="10�b�^�C�}�[" onClick="timer();"><br>
+	<input type="button" name="timerButton" value="10秒タイマー" onClick="timer();"><br>
 	<input type="number" id="timer" value="0">
 	<br>
 	<hr>
 
-	<input type="button" name="barButton" value="�����L�т邾��" onClick="bar();">
+	<input type="button" name="barButton" value="線が伸びるだけ" onClick="bar();">
 	<input type="number" id="barDuration" value="1000">[ms]
 	<hr id="bar" align="left" width="50">
 	<br>
 	<hr>
 
-	<input type="button" name="squareButton" value="��]���Ė߂�" onClick="square()">
+	<input type="button" name="squareButton" value="回転して戻る" onClick="square()">
 	<input type="number" id="squareDuration" value="1000">[ms]
 	<div id="square">
 	</div>
 	<hr>
 
-	<input type="button" name="strButton" value="�����t����]" onClick="str()">
+	<input type="button" name="strButton" value="文字付き回転" onClick="str()">
 	<input type="number" id="strDuration" value="1000">[ms]
 	<div id="str">
-		��
+		仂
 	</div>
 	<hr>
 
-	<input type="button" name="translateButton" value="�t�F�[�h�A�E�g/�C��" onClick="translate()">
+	<input type="button" name="translateButton" value="フェードアウト/イン" onClick="translate()">
 	<input type="number" id="translateDuration" value="1000">[ms]
 	<div id="translate">
-		��
+		仂
 	</div>
 	<hr>
 
-	<input type="button" name="gradationButton" value="�O���f�[�V����" onClick="gradation()">
+	<input type="button" name="gradationButton" value="グラデーション" onClick="gradation()">
 	<input type="number" id="gradationDuration" value="3000">[ms]
 	<div id="gradation">
 	</div>
 	<hr>
 
-	<input type="button" name="progressButtonStart" value="�v���O���X�o�[��" onClick="progress()">
+	<input type="button" name="progressButtonStart" value="プログレスバー風" onClick="progress()">
 	<div id="progressCase">
 		<div id="progress">
 		</div>
 	</div>
 	<hr>
 
-	<input type="button" name="slideButtonStart" value="�X���C�h��" onClick="slide()">
+	<input type="button" name="slideButtonStart" value="スライド風" onClick="slide()">
 	<div id="slideCase">
 		<div id="slideHidden">
 		</div>
 		<div id="slide0">
-			�X���C�hTOP
+			スライドTOP
 		</div>
 		<div id="slide1">
-			�X���C�h1
+			スライド1
 		</div>
 		<div id="slide2">
-			�X���C�h2
+			スライド2
 		</div>
 		<div id="slide3">
-			�X���C�h3
+			スライド3
 		</div>
 		<div id="slide4">
-			�X���C�hEND
+			スライドEND
 		</div>
 	</div>
 	<hr>
 
-	�N���b�N�����ʒu�Ɉړ�
+	クリックした位置に移動
 	<div id="mouse">
 		<div id="mouseObj">
 		</div>

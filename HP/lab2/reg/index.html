@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./requestAnimationFrame.js"></script>
 	<script src="./dat.gui.min.js"></script>
@@ -15,7 +15,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h2>FX</h2>
+			<h2>è‰²ã€…</h2>
 		</div>
 		<hr>
 		<div id="column">
@@ -24,46 +24,46 @@
 					<textarea name="textbox1" type="text" id="textbox1" rows="4" cols="60" onkeyup="strGet();"></textarea>
 				</form>
 				<form name="result">
-					•¶Žš”F<input type="text" name="resultbox1" id="resultbox1" size="4" style="background-color:#99dddd;">
-					s”F<input type="text" name="resultbox2" id="resultbox2" size="4" style="background-color:#99dddd;">
+					æ–‡å­—æ•°ï¼š<input type="text" name="resultbox1" id="resultbox1" size="4" style="background-color:#99dddd;">
+					è¡Œæ•°ï¼š<input type="text" name="resultbox2" id="resultbox2" size="4" style="background-color:#99dddd;">
 				</form>
 				
 				<div id="Dat">
 				</div>
 				
 				<div id="Color">
-					¦‚±‚±‚Ì•¶Žš‚Í•\Ž¦‚³‚ê‚Ü‚¹‚ñB
+					â€»ã“ã“ã®æ–‡å­—ã¯è¡¨ç¤ºã•ã‚Œã¾ã›ã‚“ã€‚
 				</div>
 				<div id="Result">
-					<b>ƒJƒ‰[ƒR[ƒh</b>
+					<b>ã‚«ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰</b>
 					<form name="colorResultHex">
-						”wŒiFF<input type="text" name="bgColorCode" id="bgColorCode" size="10" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontColorCode" id="fontColorCode" size="10" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgColorCode" id="bgColorCode" size="10" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontColorCode" id="fontColorCode" size="10" style="background-color:#99dddd;">
 					</form>
 					<b>RGB</b>
 					<form name="colorResultRGB">
-						”wŒiFF<input type="text" name="bgRGB" id="bgRGB" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontRGB" id="fontRGB" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgRGB" id="bgRGB" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontRGB" id="fontRGB" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>RGBiŠ„‡j</b>
+					<b>RGBï¼ˆå‰²åˆï¼‰</b>
 					<form name="colorResultRGB">
-						”wŒiFF<input type="text" name="bgRateRGB" id="bgRateRGB" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontRateRGB" id="fontRateRGB" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgRateRGB" id="bgRateRGB" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontRateRGB" id="fontRateRGB" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>HSViH:deg, S:%, V:%j</b>
+					<b>HSVï¼ˆH:deg, S:%, V:%ï¼‰</b>
 					<form name="colorResultHSV">
-						”wŒiFF<input type="text" name="bgHSV" id="bgHSV" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontHSV" id="fontHSV" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgHSV" id="bgHSV" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontHSV" id="fontHSV" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>HSVi255’iŠKj</b>
+					<b>HSVï¼ˆ255æ®µéšŽï¼‰</b>
 					<form name="colorResultHexHSV">
-						”wŒiFF<input type="text" name="bgHexHSV" id="bgHexHSV" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontHexHSV" id="fontHexHSV" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgHexHSV" id="bgHexHSV" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontHexHSV" id="fontHexHSV" size="20" style="background-color:#99dddd;">
 					</form>
 				</div>
 			</div>
 			<div id="right">
-				<b>ŽQlF</b><br>
+				<b>å‚è€ƒï¼š</b><br>
 				<img src="RGBCube.png" width="200" height="183"><br>
 				<img src="HSV_cylinder.png" width="272px" height="204px">
 			</div>

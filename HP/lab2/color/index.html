@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="div.css">
 	<script src="./requestAnimationFrame.js"></script>
 	<script src="./dat.gui.min.js"></script>
@@ -24,56 +24,56 @@
 					<textarea name="textbox1" type="text" id="textbox1" rows="4" cols="60" onkeyup="strGet();"></textarea>
 				</form>
 				<form name="result">
-					•¶Žš”F<input type="text" name="resultbox1" id="resultbox1" size="4" style="background-color:#99dddd;">
-					s”F<input type="text" name="resultbox2" id="resultbox2" size="4" style="background-color:#99dddd;">
+					æ–‡å­—æ•°ï¼š<input type="text" name="resultbox1" id="resultbox1" size="4" style="background-color:#99dddd;">
+					è¡Œæ•°ï¼š<input type="text" name="resultbox2" id="resultbox2" size="4" style="background-color:#99dddd;">
 				</form>
 				
 				<div id="Dat">
 				</div>
 				
 				<div id="Color">
-					¦<br>
-					ƒuƒ‰ƒEƒU‚ª‘Î‰ž‚µ‚Ä‚¢‚Ü‚¹‚ñBƒXƒ}ƒz‚Ìê‡‚Í’m‚è‚Ü‚¹‚ñB<br>
-					„§ƒuƒ‰ƒEƒU<br>
-					E<a href="http://www.mozilla.jp/firefox/">Ž©—R‚ÉƒJƒXƒ^ƒ}ƒCƒYI Firefox</a><br>
-					E<a href="http://www.google.co.jp/intl/ja/chrome/browser/">¢ŠEƒVƒFƒANo1I Google Chrome</a><br>
-					E<a href="http://www.opera.com/ja/">OperaÅ‹­“`à</a>
+					â€»<br>
+					ãƒ–ãƒ©ã‚¦ã‚¶ãŒå¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ã€‚ã‚¹ãƒžãƒ›ã®å ´åˆã¯çŸ¥ã‚Šã¾ã›ã‚“ã€‚<br>
+					æŽ¨å¥¨ãƒ–ãƒ©ã‚¦ã‚¶<br>
+					ãƒ»<a href="http://www.mozilla.jp/firefox/">è‡ªç”±ã«ã‚«ã‚¹ã‚¿ãƒžã‚¤ã‚ºï¼ Firefox</a><br>
+					ãƒ»<a href="http://www.google.co.jp/intl/ja/chrome/browser/">ä¸–ç•Œã‚·ã‚§ã‚¢No1ï¼ Google Chrome</a><br>
+					ãƒ»<a href="http://www.opera.com/ja/">Operaæœ€å¼·ä¼èª¬</a>
 				</div>
 				<div id="Result">
-					<b>ƒJƒ‰[ƒR[ƒh</b>
+					<b>ã‚«ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰</b>
 					<form name="colorResultHex">
-						”wŒiFF<input type="text" name="bgColorCode" id="bgColorCode" size="10" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontColorCode" id="fontColorCode" size="10" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgColorCode" id="bgColorCode" size="10" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontColorCode" id="fontColorCode" size="10" style="background-color:#99dddd;">
 					</form>
 					<b>RGB</b>
 					<form name="colorResultRGB">
-						”wŒiFF<input type="text" name="bgRGB" id="bgRGB" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontRGB" id="fontRGB" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgRGB" id="bgRGB" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontRGB" id="fontRGB" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>RGBiŠ„‡j</b>
+					<b>RGBï¼ˆå‰²åˆï¼‰</b>
 					<form name="colorResultRGB">
-						”wŒiFF<input type="text" name="bgRateRGB" id="bgRateRGB" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontRateRGB" id="fontRateRGB" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgRateRGB" id="bgRateRGB" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontRateRGB" id="fontRateRGB" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>HSViH:deg, S:%, V:%j</b>
+					<b>HSVï¼ˆH:deg, S:%, V:%ï¼‰</b>
 					<form name="colorResultHSV">
-						”wŒiFF<input type="text" name="bgHSV" id="bgHSV" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontHSV" id="fontHSV" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgHSV" id="bgHSV" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontHSV" id="fontHSV" size="20" style="background-color:#99dddd;">
 					</form>
-					<b>HSVi255’iŠKj</b>
+					<b>HSVï¼ˆ255æ®µéšŽï¼‰</b>
 					<form name="colorResultHexHSV">
-						”wŒiFF<input type="text" name="bgHexHSV" id="bgHexHSV" size="20" style="background-color:#99dddd;">
-						•¶ŽšFF<input type="text" name="fontHexHSV" id="fontHexHSV" size="20" style="background-color:#99dddd;">
+						èƒŒæ™¯è‰²ï¼š<input type="text" name="bgHexHSV" id="bgHexHSV" size="20" style="background-color:#99dddd;">
+						æ–‡å­—è‰²ï¼š<input type="text" name="fontHexHSV" id="fontHexHSV" size="20" style="background-color:#99dddd;">
 					</form>
 				</div>
 			</div>
 			<div id="right">
-				<label><input type="checkbox" onclick="buttonMode();" name="Button1">HSV‚ÅŽw’è</label><br>
-				¦Ø‚èŽÌ‚Ä, Ø‚èã‚°‚ÌŠÖŒW‚Å}1‚¸‚ê‚éê‡‚ª‚ ‚è‚Ü‚·B
+				<label><input type="checkbox" onclick="buttonMode();" name="Button1">HSVã§æŒ‡å®š</label><br>
+				â€»åˆ‡ã‚Šæ¨ã¦, åˆ‡ã‚Šä¸Šã’ã®é–¢ä¿‚ã§Â±1ãšã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚
 				<div id="HSVDat">
 				</div>
 				
-				<b>ŽQlƒCƒ[ƒWF</b><br>
+				<b>å‚è€ƒã‚¤ãƒ¡ãƒ¼ã‚¸ï¼š</b><br>
 				<img src="RGBCube.png" width="200" height="183">
 				<img src="HSV_cylinder.png" width="272px" height="204px">
 			</div>
