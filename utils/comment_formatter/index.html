@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>サンプル集</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/png"/>
+    </head>
+    <body>
+    
+    コメント表記
+    <input type="text" name="comment_sign" id="comment_sign" size="4" onKeyUp="func_textarea()">
+    
+    横幅変更
+    <input type="range" name="range_horizontal_size" id="range_horizontal_size" min="100" max="1500" step="50" oninput="set_textarea_div_width()">
+    <input type="text" name="range_horizontal_size_value" id="range_horizontal_size_value" size="4" style="background-color: #bbb">
+    
+    縦幅変更
+    <input type="range" name="range_vertical_size" id="range_vertical_size" min="200" max="1500" step="50" oninput="set_textarea_div_height()">
+    <input type="text" name="range_vertical_size_value" id="range_vertical_size_value" size="4" style="background-color: #bbb">
+    <hr>
+
+    <div class="textarea_div" id="src_strings_div">
+      テキスト<br>
+      <textarea name="src_strings" id="src_strings" rows="60" cols="60" wrap="off" onKeyUp="func_textarea()">sample</textarea>
+    </div>
+    <div class="textarea_div" id="src_comments_div">
+      コメント<br>
+      <textarea name="src_comments" id="src_comments" rows="60" cols="60" wrap="off" onKeyUp="func_textarea()">sample</textarea>
+    </div>
+    <div class="textarea_div" id="out_area_div">
+      リザルト <input type="button" name="copy_button" id="copy_button" onClick="copy_result()" value="コピー"><br>
+      <textarea name="out_area" id="out_area" rows="60" cols="60" wrap="off" readonly>sample</textarea>
+    </div>
+    <hr>
+    
+    </body>
+</html>

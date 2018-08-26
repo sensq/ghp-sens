@@ -1,0 +1,18 @@
+textarea {  
+  width: 98%;
+  height: 95%;
+  background-image: linear-gradient(180deg, #fff, limegreen);
+  resize: none;
+}
+
+textarea#out_area {
+  background-image: linear-gradient(180deg, #fff, coral);
+}
+
+.textarea_div {
+  min-width: 100px;
+  display: inline-block;
+  width: 32%;
+  resize: horizontal;
+  overflow: hidden;
+}
